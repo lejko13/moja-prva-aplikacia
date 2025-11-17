@@ -1,0 +1,24 @@
+.Otomto {
+    height: 600px;
+    width: 500px;
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+    /* background-color: aqua; */
+    overflow: auto;
+      overscroll-behavior: contain;
+    scrollbar-width: none; /* pre Firefox */
+    -ms-overflow-style: none; /* pre starý Edge/IE */
+}
+
+.Otomto::-webkit-scrollbar {
+    display: none; /* pre Chrome, Safari, Opera */
+}
+.texticekzvyraznemny{
+    font-size: var(--font-size-base4);
+  color: var(--farba-cierna);
+}
+
+.popisecekk{
+    color: var(--farba-cierna);
+}

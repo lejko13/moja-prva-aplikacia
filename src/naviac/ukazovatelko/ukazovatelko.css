@@ -1,0 +1,25 @@
+.Ukazovatelko{
+    height: 25PX;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999PX;
+    font-size: 22px;
+    transition: var(--transition);
+    color: var(--farba-biela);
+    width: 25PX;
+    background-color: var(--farba-main2)
+}
+.Ukazovatelko:hover{
+    height: 25PX;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999PX;
+    font-size: 22px;
+    transition: var(--transition);
+    color: var(--farba-biela);
+    width: 25PX;
+    background-color: transparent;
+}

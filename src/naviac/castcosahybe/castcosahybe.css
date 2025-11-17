@@ -1,0 +1,76 @@
+.fitrovenepolozky{
+  height: 20px;
+  z-index: 10;
+  top: 0;
+  display: grid;
+  right: 0px;
+  grid-template-columns: 1fr 1.0fr 0.3fr;
+  position: absolute;
+  width: 100%;
+  /* background-color: aqua; */
+}
+.pome{
+    height: 35px;
+    width: 35px;
+   transform: rotate(90deg);
+    display: flex;
+    left: -35px;
+    /* background-color: blue; */
+    top: 20px;
+    position: absolute;
+}
+.pome2{
+    height: 35px;
+    width: 35px;
+   transform: rotate(0deg);
+    display: flex;
+    right: -35px;
+    /* background-color: blue; */
+    top: 20px;
+    position: absolute;
+}
+.jedenko{
+  background-color: var(--farba-biela)
+}
+.dvaenko{
+
+  background-color: var(--farba-biela);
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+.tutobude{
+ 
+width: fit-content;
+display: flex;
+position: absolute;
+border-radius: 0px 0px 18px 18px;
+height: 75px;
+
+padding: 10px ;
+background-color: var(--farba-biela);
+}
+.obshaTUbedu{
+    height: 100%;
+    width: fit-content;
+    gap: var( --gap-male);
+    display: flex;
+    align-items: end;
+    /* background-color: red; */
+
+}
+.tirko{
+   background-color: var(--farba-biela);
+}
+.customfitler{
+    width: 80px;
+     border-radius: VAR(  --border-radius-maly);
+    height: 40px;
+    background-color: blue;
+}
+.bar{
+  height: 20px;
+  width: 100px;
+  background-color: aqua;
+}

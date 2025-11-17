@@ -1,0 +1,118 @@
+/* 🌍 RESET A ZÁKLADNÉ NASTAVENIA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🧭 Odkazy */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 📐 HTML a BODY */
+html {
+  font-size: 16px; /* 1rem = 16px */
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(  --font-family);
+  color: var(--text-color, #333);
+  background-color: var(--farba-biela, #fff);
+  overflow-y: scroll;
+
+  /* Skrytie scrollbarov */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* 🔳 Root element (React mount point) */
+#root {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--farba-biela);
+}
+
+/* 🎨 Premenné */
+:root {
+  --farba-main:#FF385C;
+  --farba-mainhover:#fb0431;
+
+  --farba-main2:#e0e0e0;
+  --farba-biela: #ffffff;
+  --farba-bielaEfekty: #90909063;
+  --farba-sivaText: rgb(149, 149, 149);
+  --farba-cervena: #d52c2c;
+  --farba-zelena: #2bd837;
+  --farba-zlta: #d9d42d;
+ 
+  /* --farba-bielaBlur: #ffffff52; */
+  --farba-cierna: #000000;
+
+  --farba-cierna-special: #343434;
+  --farba-siva: #cbcbcb;
+  --border:1px solid var(--farba-siva);
+ 
+   --box-shadow: 0 6px 10px rgba(0, 0, 0, 0.198);
+
+  --text-color: #333;
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --font-family:"Poppins", sans-serif;
+
+
+  --padding:10px;
+  --border-radius-Vonku: 18px;
+  --border-radius-maly: 12px;
+  --border-radius-Dnu: 20px;
+
+  --padding-Main: 20px 40px;
+  /* --marginSpecial: 10px 0px; */
+
+  --padding-main2:20px 0px 20px 40px;
+  /* --padding-Main2: 110px 80px 20px 80px; */
+  --padding-Mala: 10px;
+
+ --gap-malicka: 2.5px;
+  --gap-little: 5px;
+  --gap-male: 10px;
+ 
+  --gap-stred: 25px;
+  --gap-velke: 30px;
+
+  --opacity: 0.5;
+  --transition: all 0.3s ease;
+
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-base100: 0.95rem;       /* 16px */
+  --font-size-base4: 1.2rem;       /* 16px */
+  --font-size-base5: 1.32rem;       /* 16px */
+  --font-size-base2: 0.875rem;
+  --font-size-base69: 0.900rem;
+    /* 14px */
+  --font-size-base3: 0.600rem;  /* 14px */
+  --font-size-small: 0.800rem;  /* 12px */
+  --font-size-large: 1.60rem;   /* 20px */
+  --font-size-xl: 1.5rem;       /* 24px */
+  --font-size-xxl: 2rem;        /* 32px */
+  --font-size-xxxl: 3.4rem;     /* 54px */
+
+  --font-Hrubka-stred: 450;
+  --font-Hrubka-stred2: 500;
+  --font-Hrubka-stred3: 400;
+}
+
+/* 🌀 Pomocná trieda na hladký scroll */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}

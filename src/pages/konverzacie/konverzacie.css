@@ -1,0 +1,16 @@
+.Konverzacie {
+    width: 100%;
+    height: 1000px; /* alebo 100vh, podľa potreby */
+    overflow-y: auto; /* scroll sa objaví, keď obsah presahuje výšku */
+    background-color: blue;
+}
+.uvidime{
+  height: 300px;
+  width: 100%;
+  background-color: blueviolet;
+}
+.uvidim2{
+  height: 300px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,50 @@
+
+.obalcekk{
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.boxicek{
+  top:  55px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    padding: 5px;
+    background-color: var(--farba-biela);
+    box-shadow: var( --box-shadow);
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var( --border-radius-maly);
+}
+.tlacidlo333 {
+
+  border: none;
+  font-size: var(  --font-size-base);
+  gap: 15px;
+  justify-content: center;
+position: relative;
+padding: 8px 16px;
+background-color: var(--farba-main2);
+  flex:1;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-maly);
+}
+.hoverkobuton{
+  height: 100%;
+   font-size: var(  --font-size-base69);
+  border: none;
+      border-radius: var( --border-radius-maly);
+  width: 100%;
+  transition: var(--transition);
+  background-color: var(--farba-biela);
+}
+.hoverkobuton:hover{
+ 
+  background-color: var(--farba-main2);
+}

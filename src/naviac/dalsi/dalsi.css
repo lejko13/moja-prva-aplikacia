@@ -1,0 +1,30 @@
+.Dalsi{
+    height: 45px;
+    padding: 0px 10px;
+    width: 100%;
+    gap:10px;
+    flex-direction: row;
+    display: flex;
+    /* background-color: blueviolet; */
+}
+.fotkeckako{
+    position: relative;
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 99px;
+    /* background-color: aqua; */
+}
+.fototto{
+    object-fit: cover;
+}
+.hovercover{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+transition: var(  --transition);
+}
+.hovercover:hover{
+   background-color: var( --farba-bielaEfekty)
+}

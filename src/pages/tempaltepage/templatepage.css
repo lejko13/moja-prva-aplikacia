@@ -1,0 +1,16 @@
+.StrankaProjekt{
+    height: fit-content;
+    display: flex;
+    /* padding: 0px 40px 0px 40px; */
+    /* padding: var(--padding-Main); */
+    width: 100%;
+    background-color: var(--farba-biela)
+}
+.hlavnapaage{
+   flex: 1;
+   display: flex;
+   /* padding: 30px;
+   
+   border-radius: var( --border-radius-Vonku); */
+    background-color: aqua;
+}

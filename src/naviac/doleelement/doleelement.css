@@ -1,0 +1,204 @@
+.scroolelement{
+    top:100px;
+   bottom: 80px;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    /* background-color: blueviolet; */
+    height: fit-content;
+}
+.komponnetntet{
+    height: fit-content;
+      gap:var(  --gap-stred);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.horeElemenet{
+    height: fit-content;
+    padding: 15px 10px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+ justify-content: center;
+
+  border-radius: var(--border-radius-maly);
+ box-shadow:var(--box-shadow);
+     background-color: var(--farba-biela)
+}
+.doleElemenet{
+    flex:1;
+  padding: 15px;
+     box-shadow:var(--box-shadow); /* jemný tieň */
+    /* overflow: hidden; */
+    flex-direction: column;
+    display: flex;
+ 
+    gap: 15px;
+     border-radius: var(--border-radius-maly);
+    background-color: var(--farba-biela)
+}
+.textceklencos{
+    width: 100%;
+    
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 15px;
+     position: relative;
+    /* background-color: rgb(31, 29, 29); */
+    height: fit-content;
+}
+
+.vyber{
+    gap: 15px;
+   flex: 1;
+   display: flex;
+flex-direction: column;
+   /* background-color: blueviolet; */
+}
+.horepocet{
+height: 100%;
+border-radius: var(--border-radius-maly);
+    width: 100%;
+    display: flex;
+    /* overflow: hidden; */
+    flex-direction: column;
+    border:  var( --border)
+    /* box-sizing: border-box; */
+    /* background-color: aqua; */
+}
+.dolebutton{
+    height: fit-content;
+    width: 100%;
+
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.buttnosrezervace{
+    width: 100%;
+    font-size: var(--font-size-base4);
+    color: var(--farba-biela);
+    height: 60px;
+    border: none;
+    transition: var(--transition);
+    border-radius: var(--border-radius-maly);
+    background-color: var(--farba-main);
+}
+.buttnosrezervace2{
+    width: 100%;
+    font-size: var(--font-size-base2);
+  color: var(--farba-cierna);
+    height: 30px;
+    border: none;
+    transition: var(--transition);
+    border-radius: var(--border-radius-maly);
+       background-color: var(--farba-main2);
+}
+.buttnosrezervace:Hover{
+       color: var(--farba-cierna);
+    background-color: var(--farba-main2);
+}
+.spodoketexteceekok{
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    height: 20px;
+}
+.horehorrehroe{
+ width: 100%;
+    height: 50px;
+    display: flex;
+   
+    /* background-color: rgb(112, 112, 112); */
+}
+.doledoledoel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top:  var( --border);
+    /* background-color: aqua; */
+}
+.rovnaka{
+    width: 100%;
+    height: 100%;
+     padding: 10px;
+     flex-direction: column;
+     display: flex;justify-content: center;
+border-right: var( --border);
+    /* background-color: antiquewhite; */
+}
+.rovnaka2{
+    width: 100%;
+    height: 100%;
+      flex-direction: column;
+ display: flex;justify-content: center;
+     padding: 10px;
+
+    /* background-color: antiquewhite; */
+}
+.mojButton {
+  background-color: white;
+  border-radius: 99px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  border: none;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  outline: none; /* odstráni focus orámovanie */
+}
+
+/* voliteľne aj prekliknutie/tab focus */
+.mojButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+.skuskazas{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    /* background-color: aqua; */
+}
+.drzaknapocty{
+    width: 40%;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: var(--border-radius-maly);
+    /* background-color: aqua; */
+    display: grid;
+    display: flex;
+    height: 100%;
+}
+.dizsplejko{
+    width: 100%;
+    height: 100%;
+      display: flex;
+      border-left: var(--border);
+      border-right: var(--border);
+     justify-content: center;
+     align-items: center;
+    /* background-color: bisque; */
+}
+.renerecek{
+    width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* background-color: blueviolet; */
+}

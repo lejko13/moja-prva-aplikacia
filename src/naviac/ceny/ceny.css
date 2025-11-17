@@ -1,0 +1,10 @@
+.cenyceny{
+    width: 250px;
+    height: 100px;
+    left:  -275px;
+    border: 1px solid var(--farba-siva);
+    border-radius: var(  --border-radius-maly);
+    top: 0px;
+    position: absolute;
+    background-color: var(--farba-biela)
+}

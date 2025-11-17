@@ -1,0 +1,12 @@
+.Ikonyukazka{
+    height: 400PX;
+    width: 500PX;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: aqua; */
+    overflow: auto;
+    scrollbar-width: none; /* pre Firefox */
+    -ms-overflow-style: none; /* pre starý Edge/IE */
+}

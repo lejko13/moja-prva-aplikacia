@@ -1,0 +1,12 @@
+.Bodky{
+    height: 10PX;
+    transition: var( --transition);
+    width: 10PX;
+    background-color: rgb(255, 255, 255);
+    border-radius: 999PX;
+
+}
+.Bodky:hover{
+    cursor: pointer;
+   
+}

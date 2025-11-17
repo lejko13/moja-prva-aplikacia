@@ -1,0 +1,20 @@
+.Ikony{
+    color: var(--farba-cierna);
+    width: 100%;
+     border-radius: var( --border-radius-maly);
+    display: flex;
+    transition: var(--transition);
+    height: 40px;
+    align-items: center;
+    padding:9px;
+    gap: 13px;
+    position: relative;
+    justify-content: start;
+
+    overflow: hidden;
+    background-color: blueviolet;
+}
+.Ikony:hover{
+    cursor: pointer;
+   
+}

@@ -1,0 +1,45 @@
+.Tabulecak{
+    height: 70PX;
+    width: 100%;
+    align-items: center;
+ 
+    overflow: hidden;
+    display: flex;
+    
+    /* background-color: red; */
+    border: var(  --border);
+    border-radius: var(--border-radius-maly);
+}
+.lavastrana{
+flex: 1;
+display: flex;
+gap: 2.5px;
+flex-direction: column;
+   padding: 20px;
+    /* background-color: rgb(255, 85, 0); */
+
+}
+.pravastrana{
+    width: 250px;
+    gap: 10px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding: 10px 0px ;
+    background-color: rgb(255, 255, 255);
+
+}
+.tabulececeko{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 0px; */
+    height: 100%;
+
+    /* background-color: aqua; */
+}
+.tabulececeko:HOVER{
+    cursor: pointer;
+}

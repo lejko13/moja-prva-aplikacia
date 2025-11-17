@@ -1,0 +1,15 @@
+.komponetnne{
+    position: relative;
+    height: fit-content;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: var( --border-radius-Vonku);
+    width: fit-content;
+    /* border: var(--border); */
+    background-color:var(--farba-biela)
+    /* background-color:var(--farba-biela) */
+}

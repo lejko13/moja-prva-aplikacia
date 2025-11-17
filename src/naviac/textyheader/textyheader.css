@@ -1,0 +1,16 @@
+.Textyheader {
+ height: 20px;
+    width: fit-content;
+    position: absolute;
+    white-space: nowrap;
+    font-size: var(--font-size-small);
+    top: 50%;    
+    left: 45px;                /* stred vertikálne */
+    transform: translateY(-50%); /* posun tak, aby bol presne vycentrovaný vertikálne */
+    color: var(--farba-biela);
+    padding: 0px 7px;
+    border-radius: var(--border-radius-maly);
+    background-color: var(--farba-main);
+    display: flex;
+    align-items: center;  
+}

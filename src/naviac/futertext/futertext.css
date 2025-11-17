@@ -1,0 +1,73 @@
+.spodokeoko{
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+    text-overflow: ellipsis;
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid var(--farba-siva);
+    height: 170px;
+    /* background-color: red */
+
+}
+.foteckaaahh{
+    height: 45px;
+    border-radius: 99px;
+    display: flex;
+    width: 45px;
+    
+    overflow: hidden;
+
+}
+.fotkafotkafotka{
+    object-fit: cover;
+}
+.menopriezvisko{
+    display: flex;
+}
+.wrapeervrch{
+    height: 100%;
+    width: 100%;
+    align-self: start;
+    display: flex;
+    justify-content: flex-start;
+    
+    flex-direction: column;
+    
+    background-color: rgb(45, 45, 45);
+}
+.ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-base69);
+  color: var(--farba-sivaText);
+  max-height: 150px; 
+  width: 100%;
+   
+}
+.textlominkto{
+     display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: var(--font-size-base2);
+    text-overflow: ellipsis;
+    line-height: 1.2em;
+    color: var(--farba-sivaText);
+    max-height: 3.6em;       /* 1.2em * 3 riadky */
+    -webkit-line-clamp: 3;   /* počet riadkov */
+    /* background-color: blue; */
+}
+.textzobrazit{
+    color: var(--farba-cierna);
+    transition: var(--transition);
+  font-weight: 550;
+  width: fit-content;
+  /* background-color: aqua; */
+}
+.textzobrazit:hover{
+   
+     cursor: pointer;
+  text-decoration: underline;
+
+}

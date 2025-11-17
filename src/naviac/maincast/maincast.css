@@ -1,0 +1,53 @@
+.Maincast{
+    width: 100%;
+    
+    height:fit-content;
+    /* border: 1px solid black; */
+    gap: var( --gap-little);
+    background-color: var(--farba-biela)
+}
+.textCastmain{
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 40px 16px 0px;
+    align-items: center;
+    /* background-color: rgb(47, 255, 0); */
+}
+.textpodhlavnuym{
+       font-family: var( --font-family);
+    font-size: var(   --font-size-small);
+    font-weight: var(  --font-Hrubka-stred2)!important;
+    color: var(--farba-sivaText);
+    transition: var(  --transition);
+}
+/* .swipereceobal{
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+} */
+/* .slidecelok{
+    background-color: black;
+    display: flex;
+    
+} */
+ .pohybac{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    height: 55px;
+    background-color: rgb(255, 255, 255);
+    width: fit-content
+ }
+ .TEXTICEKNEAOVICEK{
+    font-family: var( --font-family);
+    font-size: var( --font-size-large);
+  
+    color: var(--farba-cierna-special);
+    transition: var(  --transition);
+ }
+ .TEXTICEKNEAOVICEK:hover{
+    cursor: pointer;
+    
+ }

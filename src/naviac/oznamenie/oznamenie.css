@@ -1,0 +1,15 @@
+.Oznamenie{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: var(--farba-biela);
+    border-radius: 99px;
+    background-color: var(--farba-main)
+}

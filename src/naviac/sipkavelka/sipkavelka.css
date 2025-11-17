@@ -1,0 +1,15 @@
+.Sipkavelka{
+    height: 35px;
+    width: 35px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    color: var(--farba-cierna);
+    justify-content: center;
+    background-color: var(--farba-main2);
+    font-size: 22px;
+    transition: var(--transition);
+}
+.Sipkavelka:hover{
+   background-color: transparent;
+}

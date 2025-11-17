@@ -1,0 +1,32 @@
+.Lenkukazka {
+    height: 290px;
+    width: 200px;
+    border-radius: var(--border-radius-maly);
+    background-color: var(--farba-cierna);
+    font-size: var(--font-size-small);
+    color: var(--farba-biela);
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    z-index: 200;
+    top: 0px;
+    right: 0px;
+
+    /* zabráni posúvaniu celej stránky */
+}
+.strankastarnka {
+    overflow: auto; /* scrollovanie povolené */
+    overscroll-behavior: contain;
+    
+    /* Skryť scrollbar v Chrome, Edge a Safari */
+    scrollbar-width: none; /* pre Firefox */
+    -ms-overflow-style: none; /* pre IE a Edge */
+}
+
+.strankastarnka::-webkit-scrollbar {
+    display: none; /* pre Chrome, Safari a Edge */
+}
+/* Scrollbar styling */
+
+
+

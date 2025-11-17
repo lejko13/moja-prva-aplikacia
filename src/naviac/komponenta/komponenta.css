@@ -1,0 +1,55 @@
+.Komponenta{
+    display: flex;
+height: fit-content;
+
+gap: 13px;
+width: 100%;
+overflow: visible;
+
+flex-direction: column;
+/* background-color: aqua; */
+}
+.textovacastitk{
+      display: -webkit-box;   
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;     
+  overflow: hidden;
+  text-overflow: ellipsis;
+    width: 100%;
+    font-size: var(--font-size-base100);
+    /* color: aqua; */
+    /* height: fit-content; */
+    
+
+}
+.texticeupozornenei{
+    transition: var(  --transition);
+    text-decoration: underline;
+    color: var(--farba-main2);
+}
+.texticeupozornenei:hover{
+    cursor: pointer;
+    color: var(--farba-cierna);
+}
+.pustac{
+    width: 250px;
+    
+    font-size: var(--font-size-small);
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* background-color: rgb(255, 119, 0); */
+}
+.tvoj-prvok {
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nazov-text {
+  font-size: var(--font-size-base5);
+  font-weight: 550;
+}

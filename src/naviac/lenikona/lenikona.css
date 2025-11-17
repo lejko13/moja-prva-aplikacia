@@ -1,0 +1,14 @@
+.Lenikona{
+    height: 40PX;
+    color: var(--farba-cierna);
+    font-size: 22px;
+    transition: var(--transition);
+    width: 40PX;
+    display: flex;
+    transition: var( --transition);
+    align-items: center;
+    /* position: relative; */
+    justify-content: center;
+    border-radius: VAR(  --border-radius-maly);
+    /* background-color: bisque; */
+}

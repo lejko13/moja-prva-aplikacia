@@ -1,0 +1,7 @@
+.input{
+    height: 100%;
+    width: 100%;
+    background-color: var(--farba-main2);
+    outline: none; /* odstráni obrys pri focus */
+    border: none;  /* voliteľne odstráni aj rámik */
+}

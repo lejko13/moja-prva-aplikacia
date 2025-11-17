@@ -1,0 +1,338 @@
+.obalicek{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    /* gap: var( --gap-male); */
+    /* position: relative; */
+    flex-direction: column;
+    /* padding: 10px; */
+    /* background-color: rgb(132, 255, 0); */
+}
+.obalciekk2{
+     gap: var( --gap-male);
+    flex-direction: column;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    /* background-color: aqua; */
+}
+.ubodiceke{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    /* background-color: pink; */
+    /* padding: 20px; */
+}
+.horeobl{
+   left: 0px;
+   right: 0px;
+   z-index: 10;
+    display: flex;
+    position: sticky;
+  top: 0; 
+  
+  right: 0;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    background-color:var(--farba-biela)
+}
+
+.zazdielam{
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+     /* border: 1px solid black; */
+    display: flex;
+    gap: var(--gap-male);
+    /* background-color: black; */
+}
+.foteckaa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 10px; */
+}
+.foktaCastik{
+    width: 100%;
+    display: flex;
+    gap:var( --gap-male);
+    flex-direction: row;
+    position: relative;
+    height: 550px;
+    /* background-color: blue; */
+}
+.lavafoktaCastik{
+    position: relative;
+    overflow: hidden;
+width: 100%;
+    display: flex;
+      border-radius: var(--border-radius-maly);
+    height: 100%;
+    /* background-color: rgb(255, 0, 0); */
+}
+
+.swiperecek{
+    width: 650px;
+}
+
+.pravafoktaCastik{
+width: 100%;
+    display: grid;
+     gap:var( --gap-male);
+  grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+    /* background-color: rgb(255, 255, 255); */
+}
+.fotke2 {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  height: 100%;
+
+  object-fit: cover;
+}
+.lavahore{
+    display: flex;
+         border-radius: var(--border-radius-maly);
+  position: relative;
+overflow: hidden;
+    /* background-color: rgb(18, 18, 18); */
+}
+.lavadole{
+ overflow: hidden;
+    display: flex;
+    position: relative;
+        border-radius: var(--border-radius-maly);
+    /* background-color: rgb(81, 81, 81); */
+}
+.pravahore{
+    overflow: hidden;
+  position: relative;
+    display: flex;
+          border-radius: var(--border-radius-maly);
+}
+.pravadole{
+    overflow: hidden;
+    display: flex;
+  position: relative;
+          border-radius: var(--border-radius-maly);
+    /* background-color: aquamarine; */
+}
+.okokokoko{
+
+    width: 20px;
+
+    background-color: pink;
+    height: 30px;
+}
+.hej{
+    width: 20px;
+    background-color: rgb(55, 0, 255);
+    height: 30px;
+}
+.texticekohlavny{
+ font-family: var( --font-family);
+    font-size: var( --font-size-large);
+  
+    color: var(--farba-cierna);
+    transition: var(  --transition);
+}
+
+.skorlovacka{
+    width: 100%;
+    /* padding: 20px; */
+    height: fit-content;
+    display: flex;
+    /* padding: 20px; */
+    gap:20px;
+
+    /* background-color: red */
+}
+.textinfo{
+    flex: 1;
+    height: fit-content;
+    /* padding: 10px; */
+    /* padding: 20px; */
+    /* background-color: rgb(125, 43, 109); */
+}
+.scroollentak{
+   
+     width: 380px;
+    /* background-color: rgb(208, 0, 255); */
+}
+
+
+
+
+
+.spodoketexteceekok{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    height: 20px;
+}
+.filtreakoko{
+    width: 100%;
+    gap: 15px;
+    
+    height: fit-content;
+    display: flex;
+    
+    /* background-color: antiquewhite; */
+}
+.dalsieinformacie{
+    width: 100%;
+    flex-direction: column;
+    /* padding: 10px; */
+    height: fit-content;
+    position: relative;
+    display: flex;
+    /* background-color: rgb(187, 255, 0); */
+}
+.hodnotenie232{
+     width: 100%;
+     /* padding: 20PX; */
+
+    
+    /* background-color: var(--farba-biela); */
+    /* background-color: rgb(38, 255, 0); */
+}
+.majitel32{
+      width: 100%;
+    height: fit-content;
+    /* background-color: rgb(95, 79, 79); */
+}
+.otazky32{
+    width: 100%;
+    height:fit-content;
+   
+    /* padding: 20px; */
+    /* padding: 20px; */
+    /* background-color: rgb(255, 0, 255); */
+}
+.hodnoteineieeapge{
+    width: 100%;
+    display: grid;
+    padding: 20px 0px;
+    align-items: center;
+    gap: 50px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+
+    height:fit-content;
+    /* background-color: aqua; */
+}
+.celecececekoko{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.lavaic{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.pravicee{
+     width: 100%;
+    height: 100%;
+    background-color: rgb(146, 146, 146);
+}
+.styliskitka{
+    height: fit-content;
+    /* background-color: aqua; */
+}
+.tuzobrazujemikony{
+    height: fit-content;
+    width: 100%; 
+
+flex-direction: row;
+gap: 10px;
+margin: var(--marginSpecial);
+    /* background-color: rgb(255, 219, 219); */
+display: flex;
+}
+.lavastrankakola{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+  
+    /* background-color: rgb(65, 69, 69); */
+}
+.pravastarankkol{
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+   height: fit-content;
+    /* background-color: rgb(246, 255, 255); */
+}
+.drzacekosdt{
+    width: 100%;
+    /* height: 1px; */
+    /* background-color: aqua; */
+    position: relative;
+}
+.zoznamntesaobal{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+gap: 20px;
+overflow: visible;
+
+    /* background-color: red; */
+    height: fit-content;
+}
+.totokdejetexoto{
+    height: 100%;
+    gap: 20px;
+    padding: 1px;
+    display: flex;
+    /* background-color: green; */
+    overflow: visible;
+    flex-direction: column;
+ 
+    width: 380px;
+}
+.totokdeniejetext{
+    display: flex;
+    flex-direction: column;
+    gap:25PX;
+    flex: 1;
+    /* background-color: pink; */
+}
+.obaltexty{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+.kliknetexticek{
+    transition: var( --transition);
+    font-size: var( --font-size-base2);
+    color: var(--farba-sivaText);
+    text-decoration: underline;
+}
+.kliknetexticek:hover{
+    cursor: pointer;
+
+    color: var(--farba-cierna);
+}
+.malitexcekekhover{
+    transition: var( --transition);
+    color: var(--farba-siva);
+}
+.malitexcekekhover:hover{
+    cursor: pointer;
+   
+}
