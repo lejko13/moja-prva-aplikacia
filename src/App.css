@@ -6,7 +6,7 @@
   height: 100vh;
   display: flex;
   gap: var( --padding);
-  background-color: red;
+  background-color: rgb(132, 255, 0);
   /* background-color: var(--farba-main2); */
   padding: var( --padding);
 }
