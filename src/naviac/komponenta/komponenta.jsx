@@ -24,7 +24,7 @@ const text1 = useRef(null)
        <div className="nazov-text" style={dizajnicek}>{nazov}</div>
 
       
-        <div  style = {doleziet}className='textovacastitk' >{text}</div>
+        <div  style = {doleziet}className='textovacastitk'  >{text}</div>
          {children}
          
          <div class="tvoj-prvok"  style={desing}>

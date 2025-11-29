@@ -1,0 +1,10 @@
+.texticekostki{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: blue; */
+}
+.textxicekkokoko {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-Hrubka-stred2);
+}

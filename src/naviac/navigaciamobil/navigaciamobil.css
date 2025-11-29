@@ -1,0 +1,33 @@
+.kokokokoo{
+    width: 100%;
+    height: fit-content;
+    padding:   8px 20px ;
+    display: none;
+
+    
+    background-color: var(--farba-biela);
+    /* border-top: var(--border) ; */
+    box-shadow:var( --box-shadow2);
+    z-index: 1000;
+ 
+}
+.buzna{
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+.buzna2 {
+    display: flex;
+    width: 350px;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    /* gap: clamp(5px, 5vw, 50px); min 10px, max 30px, prispôsobenie podľa šírky obrazovky */
+}
+ @media (max-width: 750px) {
+
+.kokokokoo{
+ display: block;
+}
+ }

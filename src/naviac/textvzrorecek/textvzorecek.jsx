@@ -2,24 +2,31 @@ import './textvzorecek.css'
 
 import React from 'react'
 
-const Textvzorecek = ({nazov,text,text2}) => {
+const Textvzorecek = ({nazov,text1,text2,text,children}) => {
   return (
     <div className='Textvzorecek'>
-        <p style={{
-            fontSize:"var(--font-size-base5)",
-            fontWeight:550
-        }}>{nazov}</p>
+        <p className="nazov-text">{nazov}</p>
         <div >
+            <p style={{
+                color:"var(--farba-sivaText)",
+                fontSize:"var(--font-size-base100)",
+            }}>{text}</p>
+
+
             <p
             style={{
+                color:"var(--farba-sivaText)",
                 fontSize:"var(--font-size-base100)",
-            }}
-            >{text}</p>
+            }}>{text1}</p>
+
             <p  style={{
-                fontSize:"var(--font-size-base100)",
+                color:"var(--farba-sivaText)",
+                fontSize:"var(--font-size-base100)",        
             }}
             >{text2}</p>
         </div>
+
+        {children}
 
 
       

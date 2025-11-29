@@ -1,6 +1,6 @@
 import './castcosahybe.css'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
 import { useContext } from "react";
@@ -8,7 +8,16 @@ import { GlobalContext } from '../reactcontext/reactcontext'
 import Lenikona from '../lenikona/lenikona'
 import Textyheader from '../textyheader/textyheader'
 
-const Castcosahyba = () => {
+const Castcosahyba = ({setDomov,rodic,posledny,dva,tri,styri,pat,sest,sedem,pojdeme,domovcek,lavasipka,pravasipka,poslednyref}) => {
+  
+
+
+  
+// console.log(pravasipka.current);
+// console.log(lavasipka.current);
+
+
+  const { pocetOblubene, setPocetOblubene, filter, setFilter, } = useContext(GlobalContext);
   const[hover,setHover] = useState(null)
  const mitotStyle = {
     width: 'fit-content',
@@ -28,11 +37,37 @@ const Castcosahyba = () => {
 const obal = {
   height:"fit-content",
   position:"relative",
-          width:"fit-content",
-         
+  width:"fit-content",
 }
-  // coonst[vidim,setVidim] = useState(null)
-    const { pocetOblubene, setPocetOblubene, filter, setFilter } = useContext(GlobalContext);
+
+    
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    const refs = [pojdeme, posledny, dva, tri, styri, pat, sest, sedem, domovcek,poslednyref];
+
+    // skontroluj klasické refs
+    for (let ref of refs) {
+      if (ref?.current?.contains(event.target)) {
+        return;
+      }
+    }
+
+    // skontroluj refs, ktoré sú polia
+    const arrayRefs = [lavasipka, pravasipka];
+    for (let ref of arrayRefs) {
+      if (ref.current?.some(el => el && el.contains(event.target))) {
+        return;
+      }
+    }
+
+    // ak klik NEBOL v žiadnom refe → zatvor
+    setFilter(false);
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, [filter]);
+
     
   return (
     <div className='fitrovenepolozky'>
@@ -43,45 +78,54 @@ const obal = {
                   height:"100%",
                   width:"100%",
                   zIndex:"10",
+                  backgroundColor:"var(--farba-biela)"
                   // backgroundColor:"pink"
 
                 }}></div>
-                {}
+                
  <AnimatePresence>
   
     <motion.div
-      className='tutobude'
-      initial={{ opacity: 1, y: 100 }}   // začína neviditeľné a posunuté hore
-        animate={{ y: filter ? 0 : -100, }}     // viditeľné a na správnej pozícii
-      exit={{ opacity: 0, y: -40 }}    
-
-      transition={{ duration: 0.5, ease: "easeOut" }}  // plynulý prechod
+    ref={rodic}
+     className='tutobude'
+  initial={{ opacity: 0, y: 90 }}   // neviditeľný + dole
+  animate={{
+    opacity: filter === "otovrene" ? 1 : 0,
+    y: filter === "otovrene" ? 0 : -90,
+  }}
+  exit={{ opacity: 0, y: -90 }}
+  transition={{ duration: 0.5, ease: "easeOut" }}  
     >
       
       <div className='obshaTUbedu'>
 
         <div style={obal}> 
 
-          <Lenikona
+          <Lenikona  
+          ref={domovcek}
+          onClick = {() => {setDomov("domov")}}
           onMouseEnter={() => setHover(7)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 7 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 7 ? "var( --farba-main2)" : "transparent"
           }}
-          > <i class='bx bx-building-house'></i>
+          > 
+          <i class='bx bx-home-alt'></i>
         {hover === 7 && <Textyheader
         style={mitotStyle}
-        >Mestské</Textyheader>}
+        >Domov</Textyheader>}
 
           </Lenikona>
         </div>
 
         <div style={obal}> 
       <Lenikona
+      ref={dva}
+       onClick = {() => {setDomov("Vidiek")}}
       onMouseEnter={() => setHover(1)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 1 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 1 ? "var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-wallet' ></i>
       {hover === 1 && <Textyheader
@@ -92,10 +136,12 @@ const obal = {
 
        <div style={obal}> 
       <Lenikona
+      ref={tri}
+       onClick = {() => {setDomov("Pre dvoch")}}
       onMouseEnter={() => setHover(2)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 2 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 2 ?"var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-group'></i>
       {hover === 2 && <Textyheader
@@ -106,26 +152,30 @@ const obal = {
          </div>
 
 
-    <div style={obal}> 
+    {/* <div style={obal}> 
       <Lenikona
+      ref={styri}
+       onClick = {() => {setDomov("S výhľadom")}}
       onMouseEnter={() => setHover(3)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 3 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 3 ? "var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-palette' ></i>
       {hover === 3 && <Textyheader
         style={mitotStyle}
         >S výhľadom</Textyheader>}
       </Lenikona>
-       </div>
+       </div> */}
 
         <div style={obal}> 
       <Lenikona
+      ref={pat}
+       onClick = {() => {setDomov("Prémiové")}}
       onMouseEnter={() => setHover(4)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 4 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 4 ? "var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-star' ></i>
        {hover === 4 && <Textyheader
@@ -139,12 +189,13 @@ const obal = {
 
         <div style={obal}> 
       <Lenikona
+      ref={sest}
       
-      
+       onClick = {() => {setDomov("S bazénom")}}
       onMouseEnter={() => setHover(5)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 5 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 5 ? "var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-swim' ></i>
           {hover === 5 && <Textyheader
@@ -155,13 +206,15 @@ const obal = {
        </div>
      
    
-        <div style={obal}>
+        {/* <div style={obal}>
       <Lenikona
+      ref = {sedem}
+       onClick = {() => {setDomov("S parkovaním")}}
       
       onMouseEnter={() => setHover(6)}
           onMouseLeave={() => setHover(null)}
           style={{
-            backgroundColor: hover === 6 ? "var(  --farba-siva)" : "transparent"
+            backgroundColor: hover === 6 ? "var( --farba-main2)" : "transparent"
           }}
       > <i class='bx bx-car'></i>
       
@@ -169,10 +222,28 @@ const obal = {
        {hover === 6 && <Textyheader
         style={mitotStyle}
         >S parkovaním</Textyheader>}
-      </div>
+      </div> */}
+
+
+        <div style={obal}> 
+
+          <Lenikona  
+          ref={posledny}
+          onClick = {() => {setDomov("mestke")}}
+          onMouseEnter={() => setHover(9)}
+          onMouseLeave={() => setHover(null)}
+          style={{
+            backgroundColor: hover === 9 ? "var( --farba-main2)" : "transparent"
+          }}
+          > <i class='bx bx-building-house'></i>
+        {hover === 9 && <Textyheader
+        style={mitotStyle}
+        >Mestské</Textyheader>}
+
+          </Lenikona>
+        </div>
       
-      
-<div className='customfitler'></div>
+
 
       </div>
         <div className='pome'>

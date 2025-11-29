@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './pridanie.css'
 import Ukazovatelko from '../ukazovatelko/ukazovatelko'
-const Pridanie = ({setHover,onClick}) => {
+const Pridanie2 = ({setHover,onClick}) => {
     const[hover2,setHover2] = useState(false)
   return (
     <div className='obalLen'
@@ -19,9 +19,10 @@ const Pridanie = ({setHover,onClick}) => {
         <Ukazovatelko
         style={{ 
             fontSize: "18px",
-        backgroundColor: hover2  ? "transparent" : "var(--farba-main2)" }}
+        backgroundColor: hover2  ? "transparent" : "var(--farba-bielaEfekty" }}
         >
             <i  class='bx bx-heart' style={{color:"var(--farba-cierna)"}}></i>
+            
 
         </Ukazovatelko>
       
@@ -29,4 +30,4 @@ const Pridanie = ({setHover,onClick}) => {
   )
 }
 
-export default Pridanie
+export default Pridanie2

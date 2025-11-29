@@ -3,11 +3,11 @@ import './futertext.css'
 import React, { useState } from 'react';
 
 import Hodnotenie from '../../naviac/hodnotenie/hodnotenie'
-const Futertex = ({texthore,textdole,fotka,pobyt,popis,hodnota,zobrazit,popisecek,datum,onClick}) => {
+const Futertex = ({texthore,textdole,fotka,pobyt,popis,hodnota,zobrazit,popisecek,datum,onClick,stylicek}) => {
 
   const[zmena,setZmena] = useState(null)
   return (
-    <div className='spodokeoko'>
+    <div className='spodokeoko' style={stylicek}>
       <div style={{display:"flex",gap:"15px",alignItems:"center"}}>
           <div className='foteckaaahh'>
               <img className = "fotkafotkafotka"src={fotka} alt="" />
@@ -20,12 +20,14 @@ const Futertex = ({texthore,textdole,fotka,pobyt,popis,hodnota,zobrazit,popisece
               color: "var(--farba-cierna)",
 
               }}>
-                <div>{texthore}</div>
-                <div  >{textdole}</div>
+                <div style={{display:"flex" ,gap:"5px",fontSize:"var(--font-size-base)"}}>
+                  <div >{texthore}</div>
+                  <div  >{textdole}</div>
+                </div>
               </div>
         
       
-          <div style={{fontSize:"var(--font-size-base69)",color:"var(--farba-sivaText)"}}>{pobyt}</div>
+          <div style={{fontSize:"var(  --font-size-small)",color:"var(--farba-sivaText)"}}>{pobyt}</div>
         </div>
       </div>
       <div style={{display:"flex",gap:"10px", display: "flex",
@@ -36,9 +38,9 @@ const Futertex = ({texthore,textdole,fotka,pobyt,popis,hodnota,zobrazit,popisece
         
 
         <div style={{display:"flex",gap:"10px"}}>
-          <div className="ellipsis-text" >{popisecek}</div>
+          <div className="ellipsis-text"  style={{fontSize:"var(  --font-size-small)",color:"var(--farba-sivaText)"}} >{popisecek}</div>
           
-            <span style={{ transition:"var( --transition)", whiteSpace: 'nowrap' ,fontSize:"var(--font-size-base69)",color: 'var( --farba-sivacierna)',fontWeight:"550"}}>{datum}</span>
+            <span style={{ transition:"var( --transition)", whiteSpace: 'nowrap' ,fontSize:"var(  --font-size-small)",color:"var(--farba-sivaText)"}}>{datum}</span>
                 <Hodnotenie text={hodnota}></Hodnotenie>
       
             

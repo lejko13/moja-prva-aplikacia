@@ -14,6 +14,7 @@
 
 .fotkaNahlad{
  width: 100%;
+ box-shadow: var(--box-shadow);
  height: 100%;
  overflow: hidden;
 
@@ -43,10 +44,12 @@ justify-content: space-between;
 .textDole{
     justify-content: center;
     align-items: center;
+
         width: 100%;
 gap: 5px;
 display: flex;
 justify-content: space-between;
+
     /* background-color: rgb(0, 255, 174); */
     
 }
@@ -118,10 +121,10 @@ transition: var(--transition);
      background-color:var(  --farba-biela) ; 
 }
 .textNazov{
+    font-size: var(    --font-size-base100);
     transition: var(--transition);
     color: var(--farba-cierna);
       white-space: nowrap;   
-    
 }
 .textNazov:hover{
     cursor: pointer;
@@ -136,13 +139,61 @@ transition: var(--transition);
     display: flex;
     /* background-color: aqua; */
 }
+.ikonainko{
+ color: var(--farba-sivaText)
+  }
 .obrazocekok2{
-
+box-shadow: var(--box-shadow);
  border-radius: var(--border-radius-maly);
     object-fit: cover;
  height: 100%;
     width: 100%;
 }
+/* .zobrazujjemmee{
+    display: none;
+} */
+.zobrazujjemmee2{
+    display: block;
+    /* background-color: aqua; */
+  }
 @media (max-width: 1100px) {
-  /* napr. 1-2 slidy */
+  .ikonainko{
+   font-size: 13px;
+  }
+ .Nahlad{
+    height: 160px;
+    
+    width:140px;
+ display: flex;
+ flex-direction: column;
+    top: 0px;
+    gap: var( --gap-male);
+    border-radius: var( --border-radius-Vonku);
+    left: 20px;
+    padding: 10px;
+    background-color: var(--farba-biela);
 }
+
+  
+}
+@media (max-width: 750px) {
+  .ikonainko{
+   font-size: 13px;
+  }
+  .Nahlad{
+    height: 230px;
+}
+  
+}
+
+
+
+@media (max-width: 680px) {
+ /* .zobrazujjemmee{
+    display: block;
+} */
+  
+}
+
+
+

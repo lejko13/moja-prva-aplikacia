@@ -2,12 +2,14 @@
 
 .lentak{
   width: 100%;
+  max-width: 1500px;
   overflow: hidden;
   height: 100vh;
   display: flex;
   gap: var( --padding);
   background-color: rgb(132, 255, 0);
   /* background-color: var(--farba-main2); */
+  /* background-color: red; */
   padding: var( --padding);
 }
 
@@ -27,6 +29,9 @@
   /* border: 1px solid var(--farba-siva); */
 /* background-color:red; */
   /* skryť scrollbar */
+  overscroll-behavior-y: contain;   /* 🔥 blokuje len vertikálne “preskočenie” */
+overscroll-behavior-x: auto; 
+   /* overscroll-behavior: contain;  */
   scrollbar-width: none; /* pre Firefox */
   -ms-overflow-style: none; /* pre IE a Edge */
 }
@@ -37,6 +42,9 @@
   padding: 0PX 0PX 0PX 0PX;
 
   align-items: center;
+  overscroll-behavior-y: contain;   /* 🔥 blokuje len vertikálne “preskočenie” */
+overscroll-behavior-x: auto; 
+   /* overscroll-behavior: contain;  */
   position: relative;
   overflow-y: auto;
   border-radius: var(--border-radius-Vonku);
@@ -56,6 +64,45 @@ background-color:var(--farba-biela);
   position: fixed;
   height: 100vh;
   opacity: 0.5;
-  z-index: 20;
+  z-index: 250;
+  /* background-color: red; */
   background-color: var(--farba-bielaEfekty);
  }
+ @media (max-width: 750px) {
+
+.lentak{
+   gap:0px;
+ flex-direction: column;
+   padding:0px;
+}
+.zakladny2{
+  height: 100%;
+  width: 100%;   
+  /* padding: 20px; */
+
+  align-items: center;
+  overscroll-behavior-y: contain;   /* 🔥 blokuje len vertikálne “preskočenie” */
+overscroll-behavior-x: auto; 
+   /* overscroll-behavior: contain;  */
+  position: relative;
+  overflow-y: auto;
+  border-radius: 0px;
+  border: none;
+/* background-color:pink; */
+/* background-color:var(--farba-biela); */
+  /* skryť scrollbar */
+  scrollbar-width: none; /* pre Firefox */
+  -ms-overflow-style: none; /* pre IE a Edge */
+}
+.paddinglen{
+  /* padding: 20px; */
+
+  background-color: black;
+}
+}
+ @media (max-width: 320px) {
+/* .paddinglen{
+  padding: 10px 0px 10px 10px;
+  background-color: black;
+} */
+}

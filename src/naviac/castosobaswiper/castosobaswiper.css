@@ -1,0 +1,15 @@
+
+.ponukapouzvatela{
+    display: flex;
+    width: 100%; 
+    height: fit-content;
+    width:100%;
+    /* padding: 30px; */
+     flex-shrink: 0;
+    background-color:var(--farba-biela);
+}
+
+.Castosobaswiper{
+   background-color:var(--farba-biela);
+    /* padding: 20px; */
+}

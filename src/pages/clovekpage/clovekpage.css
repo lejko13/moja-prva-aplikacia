@@ -1,0 +1,101 @@
+
+.datatujeme{
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    z-index: 600;
+    position: sticky;
+    opacity: 1;
+    padding: 0px 0px 10px 0px;
+    /* background-color: rgb(254, 3, 3); */
+}
+
+.datatujeme2{
+width: 100%;
+    height: fit-content;
+    
+    flex-direction: column;
+    display: flex;
+    /* gap: 20px; */
+    background-color: var(--farba-biela);
+    /* background-color: aquamarine; */
+    /* padding: 20px; */
+    /* padding: 20px 0px 0px 0px; */
+    /* gap: 10px; */
+    /* padding: 10px; */
+    
+}
+.wrapperecekk{
+    display: flex;
+ width: 100%;
+ gap: 20px;
+ /* padding: 20px; */
+ /* background-color: aquamarine; */
+ height: 400px;
+}
+.lenwrappernaobsah{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--farba-biela)
+    /* padding: 20px; */
+}
+.uceticetkoko{
+    width: fit-content;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.infovcastnicine{
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+
+
+.polozkaswiperrecekok{
+     min-width: 0 !important;
+  flex-shrink: 1;
+}
+
+.kokokokokokokskokokoskokoks{
+    width: 100%;
+
+}
+.vyhodizobraz{
+    height: fit-content;
+    width: 580px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.my-box {
+  width: 100%;
+  height: 380px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll; /* scroll zostane funkčný, scrollbar sa skryje */
+
+  scrollbar-width: none; /* Firefox */
+}
+
+.my-box::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.balicekosksks{
+    width: 100%;
+    display: flex;
+   justify-content: space-between; 
+    /* background-color: aqua; */
+}
+
+.cerveny-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+}

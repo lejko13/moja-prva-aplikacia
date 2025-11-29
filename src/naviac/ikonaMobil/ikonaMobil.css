@@ -1,0 +1,29 @@
+.IkonaMobil{
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    border-radius: var( --border-radius-maly);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40px;
+    color: var(--farba-sivaText);
+    /* background-color: rgb(134, 134, 134); */
+}
+.ikkoonnaa{
+    transition: var( --transition);
+    font-size: 25px;
+}
+.ikonaaaaloca{
+    display: none;
+    font-weight: 550;
+    transition: var( --transition);
+    font-size: var( --font-size-small2)
+}
+/* 
+@media (max-width: 350px) {
+
+.ikonaaaaloca{
+    display: none;
+}
+ } */

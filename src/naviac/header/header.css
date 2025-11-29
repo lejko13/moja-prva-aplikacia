@@ -1,7 +1,7 @@
 .Header{
     width: 70px;
     display: flex;
-    z-index: 200;
+    z-index: 300;
     /* overflow: hidden; */
     position: relative;
     flex-direction: column;
@@ -320,4 +320,23 @@ align-items: center;
     cursor: pointer;
    
    background-color: var(--farba-main2);
+}
+.hornyheader{
+     display: none;
+    width: 100%;
+     z-index: 1000;
+    height: 70px;
+      padding:   10px 20px ;
+    background-color: var(--farba-biela);
+   box-shadow:var( --box-shadow)
+}
+@media (max-width: 750px) {
+  /* sem daj štýly pre mobil/tablet */
+  .Header{
+    display: none;
+  }
+.hornyheader {
+    display: block;
+  
+}
 }

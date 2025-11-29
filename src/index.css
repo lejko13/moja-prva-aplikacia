@@ -63,7 +63,8 @@ body::-webkit-scrollbar {
   --farba-siva: #cbcbcb;
   --border:1px solid var(--farba-siva);
  
-   --box-shadow: 0 6px 10px rgba(0, 0, 0, 0.198);
+   --box-shadow: 0 6px 10px rgba(0, 0, 0, 0.091);
+   --box-shadow2: 0 -6px 10px rgba(0, 0, 0, 0.091);
 
   --text-color: #333;
   --primary-color: #007bff;
@@ -80,6 +81,10 @@ body::-webkit-scrollbar {
   /* --marginSpecial: 10px 0px; */
 
   --padding-main2:20px 0px 20px 40px;
+  --paddingHlava:20px 0px 0px 40px;
+  --sepicialitapadding:0px 40px 0px 0px;
+   --paddingdvojka: 0px 40px 16px 0px;
+   
   /* --padding-Main2: 110px 80px 20px 80px; */
   --padding-Mala: 10px;
 
@@ -101,7 +106,8 @@ body::-webkit-scrollbar {
   --font-size-base69: 0.900rem;
     /* 14px */
   --font-size-base3: 0.600rem;  /* 14px */
-  --font-size-small: 0.800rem;  /* 12px */
+  --font-size-small: 0.820rem;  /* 12px */
+  --font-size-small2: 0.690rem;  /* 12px */
   --font-size-large: 1.60rem;   /* 20px */
   --font-size-xl: 1.5rem;       /* 24px */
   --font-size-xxl: 2rem;        /* 32px */
@@ -116,3 +122,28 @@ body::-webkit-scrollbar {
 .smooth-scroll {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 1100px) {
+  :root {
+     --font-size-large:1.4rem;
+       --font-size-base100:0.90rem;
+     --font-size-small: 0.750rem;
+     --paddingHlava:10px 0px 0px 20px;
+
+      /* --sepicialitapadding:0px 20px 0px 0px; */
+       --gap-little: 2.5px;
+--font-size-base2: 0.775rem;
+--sepicialitapadding:0px 20px 0px 0px;
+   --paddingdvojka: 0px 20px 8px 0px;
+
+  }
+}
+
+/* @media (max-width: 750px) {
+  :root {
+     
+     --paddingHlava:20px 0px 0px 0px;
+      
+
+  }
+} */

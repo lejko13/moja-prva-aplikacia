@@ -1,33 +1,14 @@
-import { color } from 'framer-motion'
-import './malytexticek.css'
-import React from 'react'
+import React from 'react';
+import './malytexticek.css';
 
-const Malytexticek = ({ikona,text,text2}) => {
-    // const stilecek = {
-    //     fontSize:"var(  --font-size-base4)"
-    //       color:"var(--farba-sivaText)"
-
-    // }
-     const stilecek2 = {
-        fontSize:"var( --font-size-base69)",
-        color:"var(--farba-sivaText)"
-
-    }
+const Malytexticek = ({ ikona, text, text2, className = '',ikonastyle,textstyle,textstyel2 }) => {
   return (
-    <div style={{display:"flex",
-               color:"var(--farba-sivaText)",
-                display:"flex",
-                alignItems:"center",
-                gap:"10px",
-                }}>
-
-        <span style={{fontSize:"20px",display:"flex"}}>{ikona}</span>
-        <span style={stilecek2}> {text}</span>
-        <span style={stilecek2}>{text2}</span>
-    
-      
+    <div className={`malytexticek ${className}`}>
+      <span className="malytexticek-ikona"style={ikonastyle}>{ikona}</span>
+      <span className="malytexticek-text" style={textstyle}>{text}</span>
+      <span className="malytexticek-text" style={textstyel2}>{text2}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Malytexticek
+export default Malytexticek;

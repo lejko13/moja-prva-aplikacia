@@ -2,7 +2,7 @@ import './templatepage.css'
 import { AnimatePresence, motion } from "framer-motion";
 import React from 'react'
 
-const Templatepage = ({children}) => {
+const Templatepage = ({children,header}) => {
   return (
 
     <motion.div
@@ -19,6 +19,7 @@ const Templatepage = ({children}) => {
             // padding:"100px 0px 0px 0px",
             backgroundColor:"var(--farba-biela)"
           }}>
+            <div className='headerericek'>{header}</div>
 {children}
           </div>
             

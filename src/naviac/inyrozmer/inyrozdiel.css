@@ -1,0 +1,24 @@
+.vrhocelcekk{
+    /* background-color: aquamarine; */
+    display: flex;
+    /* gap: 20px; */
+    flex-direction: column;
+
+}
+.pohybecek{
+     height: 70px;
+      top: 20px;
+     position: sticky;
+     z-index: 100;
+   width: 100%;
+    background-color: var(--farba-biela)
+}
+
+.Inyrozmer{
+    display: grid;
+    position: relative;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 10px;
+    /* background-color: antiquewhite; */
+}

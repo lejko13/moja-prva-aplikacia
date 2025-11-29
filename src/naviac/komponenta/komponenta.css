@@ -17,8 +17,8 @@ flex-direction: column;
   overflow: hidden;
   text-overflow: ellipsis;
     width: 100%;
-    font-size: var(--font-size-base100);
-    /* color: aqua; */
+    font-size: var(--font-size-base2);
+    color: var(--farba-sivaText);
     /* height: fit-content; */
     
 

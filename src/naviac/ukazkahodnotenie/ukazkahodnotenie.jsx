@@ -10,6 +10,7 @@ const Ukazkahodnoteie = ({cislo,co,ikona,onClick}) => {
             gap:"5px",
             alignItems:"center",
             fontWeight:"550",
+          
             justifyContent:"start",
 
             // backgroundColor:"green"
@@ -17,12 +18,13 @@ const Ukazkahodnoteie = ({cislo,co,ikona,onClick}) => {
         <span>{cislo}</span>
         <span style={{
             display:"flex",
+            fontSize:"15px",
             alignItems:"center",
             justifyContent:"start",
 
         }}>{ikona}</span>
         </div>
-        <span style={{fontSize:"var( --font-size-base69)",color:"var(--farba-sivaText)"}}>{co}</span>
+        <span style={{fontSize:"var( --font-size-small)",color:"var(--farba-sivaText)"}}>{co}</span>
       
     </div>
   )

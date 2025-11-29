@@ -19,7 +19,7 @@ import Card from '../../naviac/portalpop/portalpop'
 
 
 
-const Nahlad = ({ nazov, location, hodnotenie, krajina, fotky = [],style, kontrola,prepinam ,apartman,setOtvorenie,setFarba,setQuery,otvorenie}) => {
+const Nahlad = ({ nazov, location, hodnotenie, krajina, fotky = [],style, kontrola,prepinam ,apartman,setOtvorenie,setFarba,setQuery,otvorenie,zmaz,zmaz2}) => {
   const swiperRef = useRef(null);
   const[hover,setHover] = useState(false)
     const navigate = useNavigate();
@@ -63,6 +63,7 @@ const Nahlad = ({ nazov, location, hodnotenie, krajina, fotky = [],style, kontro
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           style={{
+            boxShadow:"var(--box-shadow)",
             height:"100%",
             transition:"var(--transition)",
             opacity:"1",
@@ -120,6 +121,7 @@ const Nahlad = ({ nazov, location, hodnotenie, krajina, fotky = [],style, kontro
         <div className='textNahlad'>
           <div className='textHore'>
             <span className='textNazov' 
+            style={zmaz2}
             onClick={() => {
   if (otvorenie) {
     setOtvorenie(false);
@@ -131,20 +133,30 @@ const Nahlad = ({ nazov, location, hodnotenie, krajina, fotky = [],style, kontro
 }}
           >
               {nazov}</span>
-            <Hodnotenie text={hodnotenie} />
+
+              <span style={zmaz}>{krajina}</span>
+
+
+            <div className='zobrazujjemmee2'>
+               <Hodnotenie text={hodnotenie} />
+              </div>
           </div>
           <div className='textDole'>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <i style={{ color: "var(--farba-sivaText)" }} className='bx bx-been-here'></i>
+            <div style={{ display: "flex", gap: "5px"}}>
+              <i  className='ikonainko bx bx-been-here'></i>
               <span className='textLokacia'
                 style={{ whiteSpace: 'nowrap', fontSize: "var(--font-size-base2)", color: "var(--farba-sivaText)" }}
               >
                 {location}
               </span>
+              
             </div>
-            <span style={{ whiteSpace: 'nowrap', fontSize: "var(--font-size-base3)", color: "var(--farba-sivaText)" }}>
+            {/* <span style={{ whiteSpace: 'nowrap', fontSize: "var(--font-size-base3)", color: "var(--farba-sivaText)" }}>
               {krajina}
-            </span>
+            </span> */}
+            <div className='zobrazujjemmee'>
+               <Hodnotenie text={hodnotenie} />
+              </div>
           </div>
         </div>
       </motion.div>

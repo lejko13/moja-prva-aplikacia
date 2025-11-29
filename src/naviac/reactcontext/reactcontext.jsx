@@ -41,6 +41,7 @@ const[batolata,setBatolata] = useState(0)
 const objekt1 = useRef(null)
 
 
+const[random,setRandom] = useState(null)
 
 
 
@@ -50,6 +51,8 @@ const objekt1 = useRef(null)
 
 
 // },[info])
+
+
 const hodnotenie = useRef(null)
 const majitel = useRef(null)
 const otazky = useRef(null)
@@ -69,7 +72,7 @@ const scrollToRef = (ref, offset = 0) => {
     <GlobalContext.Provider value={{ pocetOblubene,setPocetOblubene,filter,setFilter,teraz,seTeraz,popokno,setPopokno,informacie,hodnotenie,setInfo,scrollToRef,
       majitel,otazky,ceny,setCeny,doplnok,
       dospeli,setDospeli,deti,setDeti,batolata,setBatolata,setPresun,presun,objekt1,
-      vidim,setVidim,klikanec
+      vidim,setVidim,klikanec,random,setRandom
 
      }}>
       {children}

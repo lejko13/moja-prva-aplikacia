@@ -1,0 +1,29 @@
+.Maincastoblubene{
+    height: fit-content;
+    /* padding: 20px; */
+    width: 100%;
+    display: none;
+    background-color: red;
+}
+.Maincast2{
+      width: 100%;
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    /* border: 1px solid black; */
+    /* gap: var( --gap-little); */
+    padding: 20px 0px 0px 20px;
+    background-color: var(--farba-biela);
+}
+@media (max-width: 750px) {
+.Maincastoblubene{
+    
+    display: block;
+   
+}
+}
+@media (max-width: 330px) {
+.textpodhlavnuym{
+    display: none;
+}
+}

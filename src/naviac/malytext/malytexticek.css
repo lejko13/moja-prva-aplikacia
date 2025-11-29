@@ -1,0 +1,16 @@
+.malytexticek {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--farba-sivaText);
+}
+
+.malytexticek-ikona {
+  font-size: 20px;
+  display: flex;
+}
+
+.malytexticek-text {
+  font-size: var(--font-size-base69);
+  color: var(--farba-sivaText);
+}

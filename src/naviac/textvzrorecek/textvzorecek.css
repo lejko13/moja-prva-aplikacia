@@ -1,8 +1,11 @@
 .Textvzorecek{
     width: 100%;
     display: flex;
-    gap: 20PX;
+    gap: 10PX;
     flex-direction: column;
     height: fit-content;
     /* background-color: aliceblue; */
+}
+.nazov-text {
+  font-size: var(--font-size-base5) 
 }

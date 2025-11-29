@@ -25,8 +25,7 @@
     /* padding: 20px; */
 }
 .horeobl{
-   left: 0px;
-   right: 0px;
+   width: 100%;
    z-index: 10;
     display: flex;
     position: sticky;
@@ -36,10 +35,11 @@
     align-items: center;
 
     justify-content: space-between;
-    padding: 20px 40px 20px 40px;
+    /* padding: 20px 40px 20px 40px; */
     height: fit-content;
     /* border: 1px solid black; */
     background-color:var(--farba-biela)
+    /* background-color:red */
 }
 
 .zazdielam{
@@ -63,7 +63,7 @@
     gap:var( --gap-male);
     flex-direction: row;
     position: relative;
-    height: 550px;
+    height: 580px;
     /* background-color: blue; */
 }
 .lavafoktaCastik{
@@ -307,7 +307,7 @@ overflow: visible;
 .totokdeniejetext{
     display: flex;
     flex-direction: column;
-    gap:25PX;
+    gap:20PX;
     flex: 1;
     /* background-color: pink; */
 }

@@ -7,15 +7,14 @@ const Vnutrozobrazenie = ({texthore,ikona,hodnoteie}) => {
   return (
     <div className='Vnutrozobrazenie'>
       <div className='dokpicceekk'>
-        <p style={{fontSize:"var( --font-size-base69)",color:"var(--farba-sivaText)",fontSize:"var(  --font-size-base)"}}>{texthore}</p>
-          {/* <div style={{display:"flex",alignItems:"center"}}> */}
-          <span style={{fontSize:"var( --font-size-base4)"}}>{hodnoteie}</span>
-            {/* <Star  style={{fontSize:"10px"}}/>   */}
-            {/* </div> */}
-
+        <p style={{color:"var(--farba-sivaText)",fontSize:"var(  --font-size-small)"}}>{texthore}</p>
+         <div className="hodnotenie-box">
+            <span className="hodnotenie-text">{hodnoteie}</span>
+            <i class=' ikonoinink bx bxs-star' ></i>
+        </div>
 
       </div>
-      <div style={{fontSize:"30px"}}>{ikona}</div>
+      <div style={{fontSize:"30px"}}>{ikona} </div>
       
     </div>
   )

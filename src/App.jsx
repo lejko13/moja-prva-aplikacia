@@ -17,7 +17,10 @@ import Upozornenia from './pages/upozornenia/upozornenia'
 import Profil from './pages/profil/profil'  
 import Nastavenia from './pages/nastavenia/nastavenia'
 import Informacie from './pages/informacie/informacie'
+import Maincast from './naviac/maincast/maincast'
 
+import Clovekpage from './pages/clovekpage/clovekpage'
+import Navigaciamobil from './naviac/navigaciamobil/navigaciamobil'
 import Castcosahyba from './naviac/castcosahybe/castcosahyba'
 
 
@@ -32,6 +35,7 @@ function App() {
   const[otvorenie,setOtvorenie] = useState(false)
   const[hoverheader,sethoverheader] = useState(false)
 
+  const[domov,setDomov] = useState("domov")
   const [query, setQuery] = useState("");
 
   const inputRef = useRef(null);
@@ -42,6 +46,23 @@ function App() {
 
            const zmena = useRef(null)
 
+           const rodic = useRef(null)
+   const posledny = useRef(null)
+    const dva = useRef(null)
+    const tri = useRef(null)
+    const styri = useRef(null)
+    const pat = useRef(null)
+    const sest = useRef(null)
+    const sedem = useRef(null)
+    const domovcek = useRef(null)
+    const poslednyref = useRef(null)
+     const pojdeme = useRef(null)
+
+const lavasipka = useRef([])
+const pravasipka = useRef([])
+
+
+ 
 
   return (
         <GlobalProvider zmena = {zmena}>  
@@ -50,6 +71,7 @@ function App() {
           
     <BrowserRouter>
      <Scrool
+     domov = {domov}
     zmena = {zmena}
     ></Scrool>
     
@@ -77,7 +99,7 @@ function App() {
     
    
           <div className='lentak'>
-            <Header 
+            <Header  pojdeme = {pojdeme}
             inputRef = {inputRef}
             otvorenie = {otvorenie}
             setOtvorenie = {setOtvorenie}
@@ -90,11 +112,27 @@ function App() {
             setQuery = {setQuery}
             query = {query}
             
-            
+            setDomov = {setDomov}
+            poslednyref = {poslednyref}
             ></Header>
 
            <div className='zakladny2'>
-            <Castcosahyba></Castcosahyba>
+            <Castcosahyba  
+            lavasipka = {lavasipka}  
+            pravasipka = {pravasipka}
+            pojdeme = {pojdeme}
+            rodic = {rodic}
+            posledny = {posledny}
+            dva = {dva}
+            tri = {tri}
+            styri = {styri}
+            pat = {pat}
+            sest = {sest}
+            sedem = {sedem}
+            domovcek = {domovcek}
+            setDomov = {setDomov}
+             poslednyref = {poslednyref}
+            domov = {domov}></Castcosahyba>
             
         <div className='zakladny' ref={zmena}>
           
@@ -102,7 +140,9 @@ function App() {
         <AnimatePresence>
           <Routes>
                 
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home domov = {domov}  
+            lavasipka = {lavasipka}  
+            pravasipka = {pravasipka}  />} />
 
             <Route path="/Rezervacie" element={<Rezervacie />} />
             <Route path="/Konverzacie" element={<Konverzacie />} />
@@ -111,17 +151,38 @@ function App() {
             <Route path="/Nastavenia" element={<Nastavenia />} />
             <Route path="/Informacie" element={<Informacie />} />
             <Route path="/StrankaProjekt" element={<StrankaProjekt />} />
+            <Route path="/Clovekpage/:id" element={<Clovekpage />} />
            
 
           </Routes>
            </AnimatePresence>
         </div>
+
+
         </div>
           
 
 
-       
+       <Navigaciamobil
+       pojdeme = {pojdeme}
+            inputRef = {inputRef}
+            otvorenie = {otvorenie}
+            setOtvorenie = {setOtvorenie}
+
+            hoverheader = {hoverheader}
+            sethoverheader = {sethoverheader}
+
+            farba = {farba}
+            setFarba = {setFarba}
+            setQuery = {setQuery}
+            query = {query}
+            
+            setDomov = {setDomov}
+            poslednyref = {poslednyref}
+       ></Navigaciamobil>
           </div>
+
+          
     </BrowserRouter>
     
 

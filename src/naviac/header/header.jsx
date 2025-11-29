@@ -5,7 +5,7 @@ import Fuse from 'fuse.js';
 import { apartmany } from '../../naviac/fuzzy/fuzzy'
 
 
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 
 
 import { useContext } from "react";
@@ -20,13 +20,16 @@ import Oznamenie from '../oznamenie/oznamenie'
 
 
 import Textyheader from '../textyheader/textyheader'
-
+import { RiShoppingBasket2Line } from "react-icons/ri";
 
 
 import Input from '../../naviac/fuzzy/input'
 import { use } from 'react';
-const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farba,setFarba,setQuery,query
+const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farba,setFarba,setQuery,query,setDomov,pojdeme,poslednyref
 }) => {
+   
+
+    
      const { pocetOblubene, setPocetOblubene, filter, setFilter } = useContext(GlobalContext);
 
     const [darkMode, setDarkMode] = useState(false);
@@ -95,8 +98,17 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
 
 
   };
+ 
   return (
-
+<>
+<div className='hornyheader'>
+     <input type="text"
+         placeholder="Hľadaj..."
+         inputMode="text"
+         autoComplete="off"
+         aria-label="Vyhľadávanie"
+         />
+</div>
   <motion.div
   className="Header"
   initial={{ y: -50, opacity: 0, width:60 }}
@@ -316,11 +328,12 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
                                                 </AnimatePresence>
                             <Ikony
                                 slova = "Domov"
-                                
+                                ref={poslednyref}
                                 onClick={() =>     {
                                     navigate("/");
                                     lejkova()
-                                    setFilter(false)
+                                    setDomov("domov")
+                                    // setFilter(false)
                                 }}
                             onMouseEnter={() => sethoverheader(3)}
                             onMouseLeave={() => sethoverheader(false)}
@@ -339,7 +352,7 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
                     </AnimatePresence>
                                             <AnimatePresence>
                                                     {!otvorenie && hoverheader === 4 && (
-                                           <Textyheader >Moje rezervácie</Textyheader>
+                                           <Textyheader >Rezervácie</Textyheader>
                                                     )}
                                                 </AnimatePresence>
 
@@ -357,7 +370,7 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
                                 style={{ backgroundColor: hoverheader === 4 ? 'var(--farba-main2)' :"transparent", }}
                 
                             
-                                ikona={<i class='ikona bx bx-cart'></i>}
+                                ikona={<RiShoppingBasket2Line className='ikona' />}
                             ></Ikony>
 
                             </div>
@@ -463,8 +476,9 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
                                                     )}
                                                 </AnimatePresence>
                             <Ikony
+                            ref = {pojdeme}
                                 slova = "Filter"
-                                 onClick={() =>     {setFilter(prev => !prev); lejkova()}}
+                                 onClick={() =>     {setFilter(prev => prev === "otovrene" ? "false" : "otovrene"); lejkova()}}
                             onMouseEnter={() => sethoverheader(8)}
                             onMouseLeave={() => sethoverheader(false)}
 
@@ -606,6 +620,8 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
         </div>
       
     </motion.div>
+ 
+    </>
   )
 }
 

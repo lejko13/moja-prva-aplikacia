@@ -11,7 +11,7 @@ const Dalsi = ({fotka,meno,priezvisko,popisek,onClick}) => {
         </div>
         <div style={{display:"flex",height:"100%",width:"200px",flexDirection:"column"}}>
             <div style={{fontSize: "var(--font-size-base4)",display:"flex",gap:"5px"}}>{meno} {priezvisko}</div>
-            <div style={{fontSize: "var(--font-size-base2)"}}>{popisek}</div>
+            <div style={{fontSize: "var(--font-size-small)" ,color:"var(  --farba-sivaText)"}}>{popisek}</div>
         
          
         </div>

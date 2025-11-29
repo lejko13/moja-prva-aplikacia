@@ -34,7 +34,7 @@ const Lenkukazka = ({ children ,style}) => {
    onClick={() => {
   setVidim(null); // alebo undefined
 }}
-      ><i class='bx bx-x'></i></Ukazovatelko>
+      ><i className='bx bx-x'></i></Ukazovatelko>
       </div>
 
 

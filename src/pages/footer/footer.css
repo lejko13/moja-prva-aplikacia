@@ -1,8 +1,8 @@
 .footer{
     width: 100%;
-    /* background-color: blanchedalmond; */
+    background-color: blanchedalmond;
     height: fit-content;
-    /* padding: 20px 0px 10px 0px; */
+    padding: var(--sepicialitapadding)
 }
 .obsahfooter{
     width: 100%;
@@ -42,6 +42,15 @@ gap: 300px;
     flex-direction: column;
     /* background-color: blue; */
 }
+.tabulka2{
+    height: 100%;
+    /* border: 1px solid black; */
+    width: fit-content;
+    display: flex;
+    gap: var(  --gap-male);
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
 .celokcekokok{
     /* background-color: rgb(60, 60, 60); */
     display: flex;
@@ -57,6 +66,7 @@ gap: 300px;
     gap: var( --gap-male);
     flex-direction: column;
     display: flex;
+   
     /* background-color: blueviolet; */
 }
 .textsposokfooter{
@@ -98,4 +108,66 @@ gap: 300px;
  .inputeekcekc input:focus {
   outline: none;
   box-shadow: none;
+}
+@media (max-width: 1150px) {
+
+  .tabulka2{
+    display: none;
+
+  }
+}
+@media (max-width: 1000px) {
+
+  .horecekook {
+    gap: 80px;            /* menší gap */
+  }
+
+  .celkonwesletter {
+    width: 300px;         /* zmenšenie šírky formulára */
+  }
+}
+
+
+
+/* === MOBIL (do 700px) === */
+@media (max-width: 830px) {
+
+.spodok{
+  display: none;
+
+}
+
+
+
+  .celokcekokok {
+    flex-direction: column;   /* celý footer pod seba */
+    gap: 30px;
+  }
+
+  .horecekook {
+    flex-direction: column;   /* tabuľky pod seba */
+    gap: 20px;
+  }
+
+  .celkonwesletter {
+    width: 100%;              /* newsletter na celú šírku */
+  }
+
+  .spodok {
+    flex-direction: column;   /* copyright + odkazy pod seba */
+    height: auto;
+    gap: 10px;
+  }
+
+  .textsposokfooter {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 750px) {
+
+.footer{
+   
+    padding: 0px 20px 0px 20px
+}
+
 }

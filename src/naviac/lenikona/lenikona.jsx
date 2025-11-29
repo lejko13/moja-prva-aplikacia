@@ -1,15 +1,19 @@
 import './lenikona.css'
+import React, { forwardRef } from 'react'
 
-import React from 'react'
-
-const Lenikona = ({children,onMouseEnter,onMouseLeave,style}) => {
+const Lenikona = forwardRef(({ children, onMouseEnter, onMouseLeave, style, onClick }, ref) => {
   return (
-    <div className='Lenikona' onMouseEnter = {onMouseEnter} onMouseLeave={onMouseLeave} style = {style}>
-
-        {children}
-      
+    <div
+      className='Lenikona'
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      style={style}
+      onClick={onClick}
+      ref={ref}
+    >
+      {children}
     </div>
   )
-}
+})
 
 export default Lenikona

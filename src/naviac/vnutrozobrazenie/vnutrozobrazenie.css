@@ -14,5 +14,22 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* background-color: aqua; */
     
+}
+.hodnotenie-box {
+  display: flex;
+  gap: 5px;
+  /* background-color: aqua; */
+  align-items: center;
+}
+
+.hodnotenie-text {
+  font-size: var(--font-size-base4);
+}
+.ikonoinink{
+    font-size: 12px;
+  
+    flex-direction: row;
+    color: gold;
 }

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { GlobalContext } from '../../naviac/reactcontext/reactcontext'
 import React from 'react'
 
-const Scrool = ({zmena}) => {
+const Scrool = ({zmena,domov}) => {
   const {informacie,hodnotenie,majitel,otazky } = useContext(GlobalContext);
   const { pathname } = useLocation();
     // const referencie = useEffect()
@@ -17,7 +17,7 @@ const Scrool = ({zmena}) => {
   }
         
 
-    },[pathname]) 
+    },[pathname,domov]) 
 
     
    return null;

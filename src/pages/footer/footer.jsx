@@ -41,7 +41,7 @@ const text = {
             
 
 
-            <div className='tabulka'>
+            <div className='tabulka2'>
               <span style={text}>Kategórie</span>
               <div className='odkazisaem'>
                 <div className='odkazisaem'>

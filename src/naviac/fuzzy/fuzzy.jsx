@@ -5,6 +5,7 @@ export const apartmany = [
   // Bratislavský kraj - Bratislava
     { id: "1BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Slnečný", hodnotenie: "4,96", cena: 120,
     fotky: ["/1.webp", "/2.webp","/3.webp","/5.webp","/1.webp", "/2.webp","/3.webp","/5.webp"],typ: "3-izbový byt",
+    filter: "mesto",ideal:"predvoch",
  
   popisek: "Zrelaxujte na tomto jedinečnom a pokojnom mieste, ktoré sa nachádza v tesnej blízkosti malebného lesoparku, pričom ponúka výbornú dostupnosť do centra mesta. Byt sa nachádza na treťom poschodí moderného bytového domu  novostavby vybavenej výťahom a s bezplatným parkovaním v garáži, čo zabezpečuje maximálny komfort pre vás i vaše vozidlo.Interiér bytu je kompletne zariadený a vybavený všetkým, čo potrebujete pre pohodlný pobyt. K dispozícii sú vonkajšie žalúzie, ktoré umožňujú regulovať svetlo a súkromie, ako aj klimatizačná jednotka pre príjemnú teplotu počas horúcich dní. Z priestrannej terasy sa vám naskytne nádherný výhľad na okolitý park a panorámu Bratislavy, čo robí miesto ideálnym pre rannú kávu alebo večerný relax.Dostupnosť do centra mesta je veľmi dobrá  iba 7 minút pešo k autobusovej zastávke, odkiaľ premáva viacero spojov, alebo len 5 minút taxíkom. V tomto byte sa budete cítiť ako doma  pohodlne, bezpečne a úplne uvoľnene.",
 
@@ -17,6 +18,8 @@ export const apartmany = [
   pravidla:"Pravidlá zákazu fajčenia  Fajčenie vnútri je zakázané. Ak dôjde k fajčeniu vnútri apartmánu, bude sa účtovať poplatok 200 € na pokrytie profesionálneho čistenia ozónu.",
 
 prehosti:"Prístup pre hostí",
+
+
 
 hodnota:{
   cistota:"4.9",
@@ -58,6 +61,7 @@ hodnota:{
     krajina: "Slovensko"
   },
 
+idecka:["3BB", "5BB", "7BB", "10BB","2BB","3BS"],
 
 veduci:
   {meno:"Leo",
@@ -71,52 +75,153 @@ veduci:
    podrobnost1:"Miera odozvy: 100 %",
    podrobnost2:"Odpovedá do hodiny",
 
-   zeco:"Superhostitelia sú skúsení, vysoko hodnotení hostitelia, ktorí chcú svojim hosťom čo najviac spríjemniť pobyt."
+   zeco:"Superhostitelia sú skúsení, vysoko hodnotení hostitelia, ktorí chcú svojim hosťom čo najviac spríjemniť pobyt.",
 
    
-   
+   texticek:"Som ambiciózny človek, ktorý rád pracuje na nových nápadoch a posúva sa dopredu. Zaujímam sa o podnikanie, moderné technológie a neustále sa učím nové veci. Mám rád výzvy, pretože ma posúvajú bližšie k mojim cieľom. Verím, že tvrdá práca a jasná vízia sú základom úspechu."
   },
-
 
   majitel:[
     "samoobsluha",
     "flexibilny",
-    "cistota"
-    
+    "cistota",
+    "storno",
+    "komfort",
+    "parkovanie",
+    "vchod",
+
   ],
 
+  hodnotenie2:[
+     {
+    id: "1",
+    klientMeno: "Erik",
+    klientPriezvisko: "Elinucni",
+    klientMesto: "Luterbach, Švajčiarsko",
+    klientDatum: "5.10 2025",
+    klientAkoDlho: "Pobyt trval jednu noc",
+    klientFotky: "/muz9.avif",
+    klientHodnotenieVlaste: "4.54",
+    klientHodnotenie:
+      "Bývanie bolo asi v najlepšej lokalite akú sme si len mohli vybrať. Komunikácia hostiteľa bola veľmi rýchla. Určite tento byt odporúčam a veľmi rád sa presne vrátim aj na najbližšej návšteve Budapešti.",
+  },
+  {
+    id: "2",
+    klientMeno: "Kamil",
+    klientPriezvisko: "Elinucni",
+    klientMesto: "Bahía Blanca, Argentína",
+    klientDatum: "3.9 2025",
+    klientAkoDlho: "Pobyt trval jednu noc",
+    klientFotky: "/muz8.avif",
+    klientHodnotenieVlaste: "4.21",
+    klientHodnotenie:
+      "Apartmán bol veľmi čistý a pohodlný, lokalita skvelá na prechádzky po centre Paríža.",
+  },
+  {
+    id: "3",
+    klientMeno: "Anna",
+    klientPriezvisko: "Novakova",
+    klientMesto: "Bratislava, Slovensko",
+    klientDatum: "23.4 2012",
+    klientAkoDlho: "Pobyt trval tri dni",
+    klientFotky: "/zena9.avif",
+    klientHodnotenieVlaste: "4.80",
+    klientHodnotenie:
+      "Úžasná hostiteľka, všetko vysvetlila a odporučila miestne reštaurácie.",
+  },
+  {
+    id: "4",
+    klientMeno: "Peter",
+    klientPriezvisko: "Kovac",
+    klientMesto: "Praha, Česká republika",
+    klientDatum: "23.5 2012",
+    klientAkoDlho: "Pobyt trval päť nocí",
+    klientFotky: "/muz5.jpg",
+    klientHodnotenieVlaste: "4.52",
+    klientHodnotenie:
+      "Pekný výhľad na more, pokojná ulica a všetko po ruke.",
+  },
+  {
+    id: "5",
+    klientMeno: "Lucia",
+    klientPriezvisko: "Horvathova",
+    klientMesto: "Viedeň, Rakúsko",
+    klientDatum:"29.2 2020",
+    klientAkoDlho: "Pobyt trval dva dni",
+    klientFotky: "/zena1.jpg",
+    klientHodnotenieVlaste: "4.90",
+    klientHodnotenie:
+      "Byt mal všetko, čo sme potrebovali  kuchyňu, klimatizáciu a rýchly internet.",
+  },
+  {
+    id: "6",
+    klientMeno: "Martin",
+    klientPriezvisko: "Siska",
+    klientMesto: "Kodaň, Dánsko",
+    klientDatum: "13.2 2023",
+    klientAkoDlho: "Pobyt trval štyri dni",
+       klientFotky: "/muz9.avif",
+    klientHodnotenieVlaste: "4.70",
+    klientHodnotenie:
+      "Bývanie bolo blízko stanice metra, ideálne na výlety po Ríme.",
+  },
+  {
+    id: "7",
+    klientMeno: "Petra",
+    klientPriezvisko: "Mlynarova",
+    klientMesto: "Londýn, UK",
+    klientDatum: "09.11 2024",
+    klientAkoDlho: "Pobyt trval sedem nocí",
+       klientFotky: "/muz9.avif",
+    klientHodnotenieVlaste: "5.00",
+    klientHodnotenie:
+      "Veľmi príjemná komunikácia, hostiteľ ochotný a flexibilný s check-inom.",
+  },
+  {
+    id: "8",
+    klientMeno: "Filip",
+    klientPriezvisko: "Novotny",
+    klientMesto: "Paríž, Francúzsko",
+    klientDatum: "12.10 2025",
+    klientAkoDlho: "Pobyt trval tri dni",
+    klientFotky: "/muz9.avif",
+    klientHodnotenieVlaste: "4.60",
+    klientHodnotenie:
+      "Izba mala moderný dizajn a pohodlnú posteľ, presne ako na fotkách.",
+  },
+  ]
 
 
      },
   { id: "2BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Modrý", hodnotenie: "4,82", cena: 95,
-     fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"],typ: "2-izbový byt",
+     fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"],typ: "2-izbový byt",    filter: "mesto", premia: "ano"
  
 
    
    },
   { id: "3BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Horský", hodnotenie: "4,73", cena: 110,
-     fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"],typ: "1-izbový byt",
+     fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"],typ: "1-izbový byt",ideal:"predvoch",
    },
   { id: "4BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán City View", hodnotenie: "4,65", cena: 130,
-     fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],typ: "3-izbový byt"
+     fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],typ: "3-izbový byt",    filter: "mesto",
    },
   { id: "5BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Ubytovanie Záhrada", hodnotenie: "4,90", cena: 105,
-     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],typ: "4-izbový byt"
+     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],typ: "4-izbový byt",    filter: "mesto",
    },
   { id: "6BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 125,
      fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "2-izbový byt"
   },
   { id: "7BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 125,
-     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "3-izbový byt"
+     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "3-izbový byt",ideal:"predvoch",
   },
   { id: "8BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 125,
-     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "2-izbový byt"
+     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "2-izbový byt",    filter: "mesto",
   },
   { id: "9BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 125,
      fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "2-izbový byt"
   },
   { id: "10BB", krajina: "Slovensko", kraj: "Bratislavský", location: "Bratislava", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 125,
-     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "3-izbový byt"
+     fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],typ: "3-izbový byt",    filter: "mesto", premia: "ano"
   },
 
       // Bratislavský kraj - Pezinok
@@ -130,7 +235,7 @@ veduci:
     fotky: ["/9.webp", "/9.webp","/9.webp","/9.webp"]
    },
   { id: "4BP", krajina: "Slovensko", kraj: "Bratislavský", location: "Pezinok", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 125,
-    fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"]
+    fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"],premia: "ano"
    },
   { id: "5BP", krajina: "Slovensko", kraj: "Bratislavský", location: "Pezinok", name: "Ubytovanie City View", hodnotenie: "4,81", cena: 110 ,
     fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
@@ -141,7 +246,7 @@ veduci:
 
       // Bratislavský kraj - Senec
   { id: "1BS", krajina: "Slovensko", kraj: "Bratislavský", location: "Senec", name: "Ubytovanie Jazero", hodnotenie: "4,87", cena: 105,
-    fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"]
+    fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"],ideal:"predvoch",premia: "ano"
    },
   { id: "2BS", krajina: "Slovensko", kraj: "Bratislavský", location: "Senec", name: "Apartmán Slnečný", hodnotenie: "4,80", cena: 95,
     fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
@@ -153,7 +258,7 @@ veduci:
     fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"]
    },
   { id: "5BS", krajina: "Slovensko", kraj: "Bratislavský", location: "Senec", name: "Apartmán Záhrada", hodnotenie: "4,83", cena: 100,
-      fotky: ["/17.webp", "/17.webp","/17.webp","/17.webp"]
+      fotky: ["/17.webp", "/17.webp","/17.webp","/17.webp"],ideal:"predvoch",
    },
   { id: "6BS", krajina: "Slovensko", kraj: "Bratislavský", location: "Senec", name: "Izba City View", hodnotenie: "4,89", cena: 115,
       fotky: ["/18.webp", "/18.webp","/18.webp","/18.webp"]
@@ -165,10 +270,10 @@ veduci:
       fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"]
   },
   { id: "2BM", krajina: "Slovensko", kraj: "Bratislavský", location: "Malacky", name: "Apartmán Slnečný", hodnotenie: "4,88", cena: 110 ,
-     fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+     fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],ideal:"predvoch",
   },
   { id: "3BM", krajina: "Slovensko", kraj: "Bratislavský", location: "Malacky", name: "Apartmán Modrý", hodnotenie: "4,76", cena: 95,
-         fotky: ["/21.webp", "/21.webp","/21.webp","/21.webp"]
+         fotky: ["/21.webp", "/21.webp","/21.webp","/21.webp"],premia: "ano"
    },
   { id: "4BM", krajina: "Slovensko", kraj: "Bratislavský", location: "Malacky", name: "Apartmán Panorama", hodnotenie: "4,91", cena: 120,
      fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"]
@@ -182,10 +287,10 @@ veduci:
 
   // Stupava
   { id: "1ST", krajina: "Slovensko", kraj: "Bratislavský", location: "Stupava", name: "Apartmán Jazero", hodnotenie: "4,87", cena: 110,
-    fotky: ["/26.webp", "/26.webp","/26.webp","/26.webp"]
+    fotky: ["/26.webp", "/26.webp","/26.webp","/26.webp"],ideal:"predvoch",
    },
   { id: "2ST", krajina: "Slovensko", kraj: "Bratislavský", location: "Stupava", name: "Apartmán Slnečný", hodnotenie: "4,83", cena: 100 ,
-    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],    filter: "mesto",
   },
   { id: "3ST", krajina: "Slovensko", kraj: "Bratislavský", location: "Stupava", name: "Apartmán Modrý", hodnotenie: "4,90", cena: 115 ,
        fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"]
@@ -199,7 +304,7 @@ veduci:
 
   },
   { id: "6ST", krajina: "Slovensko", kraj: "Bratislavský", location: "Stupava", name: "Apartmán City View", hodnotenie: "4,86", cena: 120,
-        fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+        fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],premia: "ano"
    },
 
       // Bratislavský kraj - Bernolákovo
@@ -213,11 +318,11 @@ veduci:
   ,
 
   { id: "3BE", krajina: "Slovensko", kraj: "Bratislavský", location: "Bernolákovo", name: "Apartmán Modrý", hodnotenie: "4,77", cena: 95,
-        fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"] 
+        fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"] ,ideal:"predvoch",
   },
 
   { id: "4BE", krajina: "Slovensko", kraj: "Bratislavský", location: "Bernolákovo", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 120,
-       fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+       fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],ideal:"predvoch",
    },
 
   { id: "5BE", krajina: "Slovensko", kraj: "Bratislavský", location: "Bernolákovo", name: "Apartmán Záhrada", hodnotenie: "4,81", cena: 100, 
@@ -225,7 +330,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
   },
 
   { id: "6BE", krajina: "Slovensko", kraj: "Bratislavský", location: "Bernolákovo", name: "Apartmán City View", hodnotenie: "4,85", cena: 115, 
-  fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"]
+  fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"],premia: "ano"
   },
 
   // Šamorín
@@ -238,11 +343,11 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
   },
 
   { id: "3SA", krajina: "Slovensko", kraj: "Bratislavský", location: "Šamorín", name: "Apartmán Modrý", hodnotenie: "4,90", cena: 115,
-   fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+   fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],premia: "ano"
    },
 
   { id: "4SA", krajina: "Slovensko", kraj: "Bratislavský", location: "Šamorín", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 105, 
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],ideal:"predvoch",
   },
 
   { id: "5SA", krajina: "Slovensko", kraj: "Bratislavský", location: "Šamorín", name: "Apartmán Záhrada", hodnotenie: "4,81", cena: 95 ,
@@ -255,22 +360,22 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 
   // Svätý Jur
   { id: "1SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán Lesný", hodnotenie: "4,82", cena: 100,
-fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],ideal:"predvoch",
    },
   { id: "2SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán Slnečný", hodnotenie: "4,88", cena: 110,
-    fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"]
+    fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"],premia: "ano"
    },
   { id: "3SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán Modrý", hodnotenie: "4,76", cena: 95,
-    fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
+    fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"],bazen:"ano"
   },
   { id: "4SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán Panorama", hodnotenie: "4,91", cena: 120,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],ideal:"predvoch",
    },
   { id: "5SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán Záhrada", hodnotenie: "4,79", cena: 105,
    fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"]
    },
   { id: "6SJ", krajina: "Slovensko", kraj: "Bratislavský", location: "Svätý Jur", name: "Apartmán City View", hodnotenie: "4,85", cena: 115,
-fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],premia: "ano"
    },
    // BRATISLAVA
 // kokokokokokokokok
@@ -290,22 +395,22 @@ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
   //  KOSICE
       // Košický kraj
      { id: "1KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán City View", hodnotenie: "4,88", cena: 120,
- fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+ fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],filter: "mesto",ideal:"predvoch",
       },
   { id: "2KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán Slnečný", hodnotenie: "4,81", cena: 110,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],filter: "mesto",premia: "ano",bazen:"ano"
   },
   { id: "3KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán Panorama", hodnotenie: "4,90", cena: 125,
-   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",
    },
   { id: "4KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán Modrý", hodnotenie: "4,77", cena: 115,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],filter: "mesto",ideal:"predvoch",
    },
   { id: "5KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán Lesný", hodnotenie: "4,84", cena: 105,
-  fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"]
+  fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"],filter: "mesto",premia: "ano"
    },
   { id: "6KK", krajina: "Slovensko", kraj: "Košický", location: "Košice", name: "Apartmán Záhrada", hodnotenie: "4,85", cena: 110,
-fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],filter: "mesto",premia: "ano"
    },
 
    // kokokokokokokokok
@@ -325,13 +430,13 @@ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
   //  KOSICE
   // Michalovce
   { id: "1KM", krajina: "Slovensko", kraj: "Košický", location: "Michalovce", name: "Apartmán Jazero", hodnotenie: "4,86", cena: 100,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],ideal:"predvoch",bazen:"ano"
    },
   { id: "2KM", krajina: "Slovensko", kraj: "Košický", location: "Michalovce", name: "Apartmán Slnečný", hodnotenie: "4,89", cena: 105,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],premia: "ano"
    },
   { id: "3KM", krajina: "Slovensko", kraj: "Košický", location: "Michalovce", name: "Apartmán Modrý", hodnotenie: "4,82", cena: 95,
-fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
+fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"],ideal:"predvoch",
    },
   { id: "4KM", krajina: "Slovensko", kraj: "Košický", location: "Michalovce", name: "Apartmán Panorama", hodnotenie: "4,91", cena: 110,
   fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
@@ -340,7 +445,7 @@ fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
   fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
   },
   { id: "6KM", krajina: "Slovensko", kraj: "Košický", location: "Michalovce", name: "Apartmán City View", hodnotenie: "4,85", cena: 115,
-fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],premia: "ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -359,22 +464,22 @@ fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
   //  KOSICE
   // Trebišov
   { id: "1KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán Lesný", hodnotenie: "4,87", cena: 105,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],ideal:"predvoch",bazen:"ano"
    },
   { id: "2KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 100,
    fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
    },
   { id: "3KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán Modrý", hodnotenie: "4,89", cena: 110,
-    fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+    fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],premia: "ano"
    },
   { id: "4KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán Panorama", hodnotenie: "4,78", cena: 95,
   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
    },
   { id: "5KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 105,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],premia: "ano"
    },
   { id: "6KT", krajina: "Slovensko", kraj: "Košický", location: "Trebišov", name: "Apartmán City View", hodnotenie: "4,85", cena: 115,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],ideal:"predvoch",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -393,7 +498,7 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
   //  KOSICE
   // Spišská Nová Ves
   { id: "1KSN", krajina: "Slovensko", kraj: "Košický", location: "Spišská Nová Ves", name: "Apartmán Jazero", hodnotenie: "4,86", cena: 110,
-  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],bazen:"ano"
    },
   { id: "2KSN", krajina: "Slovensko", kraj: "Košický", location: "Spišská Nová Ves", name: "Apartmán Slnečný", hodnotenie: "4,88", cena: 105,
  fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
@@ -405,10 +510,10 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
    },
   { id: "5KSN", krajina: "Slovensko", kraj: "Košický", location: "Spišská Nová Ves", name: "Apartmán Záhrada", hodnotenie: "4,83", cena: 105,
-   fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"]
+   fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"],premia: "ano"
    },
   { id: "6KSN", krajina: "Slovensko", kraj: "Košický", location: "Spišská Nová Ves", name: "Apartmán City View", hodnotenie: "4,85", cena: 120,
- fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+ fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],ideal:"predvoch",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -427,16 +532,16 @@ fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
   //  KOSICE
   // Gelnica
   { id: "1KG", krajina: "Slovensko", kraj: "Košický", location: "Gelnica", name: "Apartmán Lesný", hodnotenie: "4,84", cena: 100,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],premia: "ano"
    },
   { id: "2KG", krajina: "Slovensko", kraj: "Košický", location: "Gelnica", name: "Apartmán Slnečný", hodnotenie: "4,87", cena: 105,
-  fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"]
+  fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"],ideal:"predvoch",
    },
   { id: "3KG", krajina: "Slovensko", kraj: "Košický", location: "Gelnica", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 95,
-   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],bazen:"ano"
    },
   { id: "4KG", krajina: "Slovensko", kraj: "Košický", location: "Gelnica", name: "Apartmán Panorama", hodnotenie: "4,89", cena: 110,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],premia: "ano"
    },
   { id: "5KG", krajina: "Slovensko", kraj: "Košický", location: "Gelnica", name: "Apartmán Záhrada", hodnotenie: "4,82", cena: 100,
   fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
@@ -461,7 +566,7 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
   //  KOSICE
   // Rožňava
   { id: "1KR", krajina: "Slovensko", kraj: "Košický", location: "Rožňava", name: "Apartmán Jazero", hodnotenie: "4,86", cena: 110,
- fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+ fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],premia: "ano"
    },
   { id: "2KR", krajina: "Slovensko", kraj: "Košický", location: "Rožňava", name: "Apartmán Slnečný", hodnotenie: "4,88", cena: 105,
    fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
@@ -473,10 +578,10 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
    },
   { id: "5KR", krajina: "Slovensko", kraj: "Košický", location: "Rožňava", name: "Apartmán Záhrada", hodnotenie: "4,83", cena: 105,
-     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],bazen:"ano"
    },
   { id: "6KR", krajina: "Slovensko", kraj: "Košický", location: "Rožňava", name: "Apartmán City View", hodnotenie: "4,85", cena: 120,
- fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+ fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],premia: "ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -498,19 +603,19 @@ fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
 fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "2KMB", krajina: "Slovensko", kraj: "Košický", location: "Moldava nad Bodvou", name: "Apartmán Slnečný", hodnotenie: "4,87", cena: 105,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],premia: "ano"
    },
   { id: "3KMB", krajina: "Slovensko", kraj: "Košický", location: "Moldava nad Bodvou", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 95,
 fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
    },
   { id: "4KMB", krajina: "Slovensko", kraj: "Košický", location: "Moldava nad Bodvou", name: "Apartmán Panorama", hodnotenie: "4,89", cena: 110,
- fotky: ["/7.webp", "/7.webp","/7.webp","/7.webp"]
+ fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"],ideal:"predvoch",
    },
   { id: "5KMB", krajina: "Slovensko", kraj: "Košický", location: "Moldava nad Bodvou", name: "Apartmán Záhrada", hodnotenie: "4,82", cena: 100,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],premia: "ano"
    },
   { id: "6KMB", krajina: "Slovensko", kraj: "Košický", location: "Moldava nad Bodvou", name: "Apartmán City View", hodnotenie: "4,85", cena: 116,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],premia: "ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -530,22 +635,22 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 // TRNAVSKY
       // Trnava
   { id: "1TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán City View", hodnotenie: "4,88", cena: 120,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",bazen:"ano"
    },
   { id: "2TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán Slnečný", hodnotenie: "4,81", cena: 110,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],filter: "mesto",
    },
   { id: "3TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán Panorama", hodnotenie: "4,90", cena: 125,
- fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"]
+ fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"],filter: "mesto",
    },
   { id: "4TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán Modrý", hodnotenie: "4,77", cena: 115,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],filter: "mesto",
    },
   { id: "5TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán Lesný", hodnotenie: "4,84", cena: 105,
-fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],filter: "mesto",
    },
   { id: "6TT", krajina: "Slovensko", kraj: "Trnavský", location: "Trnava", name: "Apartmán Záhrada", hodnotenie: "4,85", cena: 110,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -564,7 +669,7 @@ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
   //  KOSICE
   // Piešťany
   { id: "1TP", krajina: "Slovensko", kraj: "Trnavský", location: "Piešťany", name: "Apartmán Jazero", hodnotenie: "4,86", cena: 100,
-    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],ideal:"predvoch",
    },
   { id: "2TP", krajina: "Slovensko", kraj: "Trnavský", location: "Piešťany", name: "Apartmán Slnečný", hodnotenie: "4,89", cena: 105,
 fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
@@ -598,7 +703,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
   //  KOSICE
   // Hlohovec
   { id: "1TH", krajina: "Slovensko", kraj: "Trnavský", location: "Hlohovec", name: "Apartmán Lesný", hodnotenie: "4,87", cena: 105,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],bazen:"ano"
    },
   { id: "2TH", krajina: "Slovensko", kraj: "Trnavský", location: "Hlohovec", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 100,
 fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
@@ -632,13 +737,13 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
   //  KOSICE
   // Senica
   { id: "1TS", krajina: "Slovensko", kraj: "Trnavský", location: "Senica", name: "Apartmán Jazero", hodnotenie: "4,86", cena: 110,
-    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+    fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],ideal:"predvoch",
    },
   { id: "2TS", krajina: "Slovensko", kraj: "Trnavský", location: "Senica", name: "Apartmán Slnečný", hodnotenie: "4,88", cena: 105,
 
    },
   { id: "3TS", krajina: "Slovensko", kraj: "Trnavský", location: "Senica", name: "Apartmán Modrý", hodnotenie: "4,90", cena: 115,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],bazen:"ano"
    },
   { id: "4TS", krajina: "Slovensko", kraj: "Trnavský", location: "Senica", name: "Apartmán Panorama", hodnotenie: "4,79", cena: 100,
  fotky: ["/7.webp", "/7.webp","/7.webp","/7.webp"]
@@ -647,7 +752,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "6TS", krajina: "Slovensko", kraj: "Trnavský", location: "Senica", name: "Apartmán City View", hodnotenie: "4,85", cena: 120,
-fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],ideal:"predvoch",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -709,7 +814,7 @@ fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
   fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
    },
   { id: "4TG", krajina: "Slovensko", kraj: "Trnavský", location: "Galanta", name: "Apartmán Panorama", hodnotenie: "4,79", cena: 100,
- fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+ fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],bazen:"ano"
    },
   { id: "5TG", krajina: "Slovensko", kraj: "Trnavský", location: "Galanta", name: "Apartmán Záhrada", hodnotenie: "4,83", cena: 105,
 fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
@@ -771,22 +876,22 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 // NITRA
       // Nitra
       { id: "1NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán City View", hodnotenie: "4,85", cena: 110,
-     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],filter: "mesto",bazen:"ano"
        },
   { id: "2NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 105,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],filter: "mesto",
    },
   { id: "3NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 120,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],filter: "mesto",
    },
   { id: "4NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 100,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],filter: "mesto",
    },
   { id: "5NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 115,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],filter: "mesto",
    },
   { id: "6NN", krajina: "Slovensko", kraj: "Nitriansky", location: "Nitra", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 110,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],filter: "mesto",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -842,7 +947,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
   fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
    },
   { id: "2NZ", krajina: "Slovensko", kraj: "Nitriansky", location: "Nové Zámky", name: "Apartmán Slnečný", hodnotenie: "4,85", cena: 110,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],ideal:"predvoch",
    },
   { id: "3NZ", krajina: "Slovensko", kraj: "Nitriansky", location: "Nové Zámky", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 95,
   fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
@@ -851,7 +956,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
    },
   { id: "5NZ", krajina: "Slovensko", kraj: "Nitriansky", location: "Nové Zámky", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 100,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],bazen:"ano"
    },
   { id: "6NZ", krajina: "Slovensko", kraj: "Nitriansky", location: "Nové Zámky", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 110,
      fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
@@ -881,7 +986,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    
    },
   { id: "3NK", krajina: "Slovensko", kraj: "Nitriansky", location: "Komárno", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 105,
- fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+ fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],ideal:"predvoch",
    },
   { id: "4NK", krajina: "Slovensko", kraj: "Nitriansky", location: "Komárno", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 90,
   fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
@@ -913,7 +1018,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 
    },
   { id: "2NSA", krajina: "Slovensko", kraj: "Nitriansky", location: "Šaľa", name: "Apartmán Slnečný", hodnotenie: "4,85", cena: 105,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],bazen:"ano"
    },
   { id: "3NSA", krajina: "Slovensko", kraj: "Nitriansky", location: "Šaľa", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 95,
 fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
@@ -922,7 +1027,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
    },
   { id: "5NSA", krajina: "Slovensko", kraj: "Nitriansky", location: "Šaľa", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 100,
-fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
+fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"],ideal:"predvoch",
    },
   { id: "6NSA", krajina: "Slovensko", kraj: "Nitriansky", location: "Šaľa", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 10,
      fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"]
@@ -952,7 +1057,7 @@ fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
     fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
    },
   { id: "4NZM", krajina: "Slovensko", kraj: "Nitriansky", location: "Zlaté Moravce", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 100,
-     fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
+     fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"],ideal:"predvoch",
    },
   { id: "5NZM", krajina: "Slovensko", kraj: "Nitriansky", location: "Zlaté Moravce", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 105,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
@@ -995,7 +1100,7 @@ fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
  fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "6ZZ", krajina: "Slovensko", kraj: "Žilinský", location: "Žilina", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 110,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],bazen:"ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1022,7 +1127,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "4ZM", krajina: "Slovensko", kraj: "Žilinský", location: "Martin", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 115,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],ideal:"predvoch",
    },
   { id: "5ZM", krajina: "Slovensko", kraj: "Žilinský", location: "Martin", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 105,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
@@ -1079,10 +1184,10 @@ fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
 // kokokokokokokokok
   // Dolný Kubín
   { id: "1ZDK", krajina: "Slovensko", kraj: "Žilinský", location: "Dolný Kubín", name: "Apartmán City View", hodnotenie: "4,85", cena: 110,
-fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
+fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"],ideal:"predvoch",
    },
   { id: "2ZDK", krajina: "Slovensko", kraj: "Žilinský", location: "Dolný Kubín", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 105,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],bazen:"ano"
    },
   { id: "3ZDK", krajina: "Slovensko", kraj: "Žilinský", location: "Dolný Kubín", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 115,
  fotky: ["/27.webp", "/27.webp","/27.webp","/27.webp"]
@@ -1118,7 +1223,7 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
   fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
    },
   { id: "3ZLM", krajina: "Slovensko", kraj: "Žilinský", location: "Liptovský Mikuláš", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 125,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],ideal:"predvoch",
    },
   { id: "4ZLM", krajina: "Slovensko", kraj: "Žilinský", location: "Liptovský Mikuláš", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 110,
  fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
@@ -1145,10 +1250,10 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 // kokokokokokokokok
   // Čadca
   { id: "1ZC", krajina: "Slovensko", kraj: "Žilinský", location: "Čadca", name: "Apartmán City View", hodnotenie: "4,85", cena: 110,
-     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+     fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],bazen:"ano"
    },
   { id: "2ZC", krajina: "Slovensko", kraj: "Žilinský", location: "Čadca", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 105,
- fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"]
+ fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],ideal:"predvoch",
    },
   { id: "3ZC", krajina: "Slovensko", kraj: "Žilinský", location: "Čadca", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 115,
 fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
@@ -1212,22 +1317,22 @@ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
 // kokokokokokokokok
          // Banská Bystrica
         { id: "1BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán City View", hodnotenie: "4,87", cena: 100,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],premia: "ano"
          },
   { id: "2BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 95,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
    },
   { id: "3BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán Panorama", hodnotenie: "4,89", cena: 105,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],premia: "ano"
    },
   { id: "4BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 90,
  fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "5BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 95,
-fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],premia: "ano"
    },
   { id: "6BBY", krajina: "Slovensko", kraj: "Banskobystrický", location: "Banská Bystrica", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 100,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],premia: "ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1248,10 +1353,10 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
      fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"]
    },
   { id: "2BZV", krajina: "Slovensko", kraj: "Banskobystrický", location: "Zvolen", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 90,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],premia: "ano"
    },
   { id: "3BZV", krajina: "Slovensko", kraj: "Banskobystrický", location: "Zvolen", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 100,
-fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],bazen:"ano"
    },
   { id: "4BZV", krajina: "Slovensko", kraj: "Banskobystrický", location: "Zvolen", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 85,
 fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
@@ -1260,7 +1365,7 @@ fotky: ["/1.webp", "/1.webp","/1.webp","/1.webp"]
  fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "6BZV", krajina: "Slovensko", kraj: "Banskobystrický", location: "Zvolen", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 95 ,
-fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
+fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],premia: "ano"
   },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1278,10 +1383,10 @@ fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
 // kokokokokokokokok
   // Žiar nad Hronom
   { id: "1BZH", krajina: "Slovensko", kraj: "Banskobystrický", location: "Žiar nad Hronom", name: "Apartmán City View", hodnotenie: "4,83", cena: 90,
-  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],premia: "ano"
    },
   { id: "2BZH", krajina: "Slovensko", kraj: "Banskobystrický", location: "Žiar nad Hronom", name: "Apartmán Slnečný", hodnotenie: "4,81", cena: 85,
-fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
+fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"],bazen:"ano"
    },
   { id: "3BZH", krajina: "Slovensko", kraj: "Banskobystrický", location: "Žiar nad Hronom", name: "Apartmán Panorama", hodnotenie: "4,87", cena: 95,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
@@ -1311,7 +1416,7 @@ fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
 // kokokokokokokokok
   // Lučenec
   { id: "1BLU", krajina: "Slovensko", kraj: "Banskobystrický", location: "Lučenec", name: "Apartmán City View", hodnotenie: "4,80", cena: 85,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],premia: "ano"
    },
   { id: "2BLU", krajina: "Slovensko", kraj: "Banskobystrický", location: "Lučenec", name: "Apartmán Slnečný", hodnotenie: "4,78", cena: 80,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
@@ -1323,7 +1428,7 @@ fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
 fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
    },
   { id: "5BLU", krajina: "Slovensko", kraj: "Banskobystrický", location: "Lučenec", name: "Apartmán Záhrada", hodnotenie: "4,79", cena: 80,
- fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],premia: "ano"
    },
   { id: "6BLU", krajina: "Slovensko", kraj: "Banskobystrický", location: "Lučenec", name: "Apartmán Lesný", hodnotenie: "4,81", cena: 85,
  fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
@@ -1344,22 +1449,22 @@ fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
 // kokokokokokokokok
   // Detva
   { id: "1BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán City View", hodnotenie: "4,82", cena: 80,
-    fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+    fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],ideal:"predvoch",
    },
   { id: "2BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán Slnečný", hodnotenie: "4,79", cena: 75,
-fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],premia: "ano"
    },
   { id: "3BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán Panorama", hodnotenie: "4,84", cena: 85,
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
    },
   { id: "4BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán Modrý", hodnotenie: "4,77", cena: 70,
- fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],bazen:"ano"
    },
   { id: "5BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán Záhrada", hodnotenie: "4,80", cena: 75,
   fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
    },
   { id: "6BDT", krajina: "Slovensko", kraj: "Banskobystrický", location: "Detva", name: "Apartmán Lesný", hodnotenie: "4,81", cena: 80,
- fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],premia: "ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1380,7 +1485,7 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
    },
   { id: "2BRS", krajina: "Slovensko", kraj: "Banskobystrický", location: "Rimavská Sobota", name: "Apartmán Slnečný", hodnotenie: "4,77", cena: 70,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],premia: "ano"
    },
   { id: "3BRS", krajina: "Slovensko", kraj: "Banskobystrický", location: "Rimavská Sobota", name: "Apartmán Panorama", hodnotenie: "4,81", cena: 80,
  fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
@@ -1392,7 +1497,7 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
  fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
    },
   { id: "6BRS", krajina: "Slovensko", kraj: "Banskobystrický", location: "Rimavská Sobota", name: "Apartmán Lesný", hodnotenie: "4,80", cena: 75,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],ideal:"predvoch",
    },
 // BANSKA BYSTIRCA
 // PRESOV
@@ -1413,22 +1518,22 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
               // Prešov
         // Prešov
   { id: "1PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán City View", hodnotenie: "4,85", cena: 90,
-fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],filter: "mesto",
    },
   { id: "2PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 85,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",
    },
   { id: "3PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán Panorama", hodnotenie: "4,88", cena: 95,
-  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"]
+  fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"],filter: "mesto",bazen:"ano"
    },
   { id: "4PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán Modrý", hodnotenie: "4,80", cena: 80,
-  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+  fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],filter: "mesto",
    },
   { id: "5PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán Záhrada", hodnotenie: "4,84", cena: 85,
-fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
+fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"],filter: "mesto",
    },
   { id: "6PS", krajina: "Slovensko", kraj: "Prešovský", location: "Prešov", name: "Apartmán Lesný", hodnotenie: "4,86", cena: 90,
- fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+ fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1446,22 +1551,22 @@ fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
 // kokokokokokokokok
   // Poprad
   { id: "1PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán City View", hodnotenie: "4,83", cena: 95,
-fotky: ["/18.webp", "/18.webp","/18.webp","/18.webp"]
+fotky: ["/18.webp", "/18.webp","/18.webp","/18.webp"],filter: "mesto",
    },
   { id: "2PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán Slnečný", hodnotenie: "4,80", cena: 90,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],filter: "mesto",
    },
   { id: "3PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán Panorama", hodnotenie: "4,85", cena: 100,
-fotky: ["/23.webp", "/23.webp","/23.webp","/23.webp"]
+fotky: ["/23.webp", "/23.webp","/23.webp","/23.webp"],filter: "mesto",
    },
   { id: "4PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán Modrý", hodnotenie: "4,78", cena: 85,
-fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"]
+fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"],filter: "mesto",
    },
   { id: "5PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán Záhrada", hodnotenie: "4,82", cena: 90,
-  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"]
+  fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"],filter: "mesto",
    },
   { id: "6PPD", krajina: "Slovensko", kraj: "Prešovský", location: "Poprad", name: "Apartmán Lesný", hodnotenie: "4,84", cena: 95,
- fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],filter: "mesto",
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1494,7 +1599,7 @@ fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
 fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"]
    },
   { id: "6PHM", krajina: "Slovensko", kraj: "Prešovský", location: "Humenné", name: "Apartmán Lesný", hodnotenie: "4,81", cena: 85,
-fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
+fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"],bazen:"ano"
    },
 // kokokokokokokokok
 // kokokokokokokokok
@@ -1524,7 +1629,7 @@ fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]
 fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
    },
   { id: "5PSL", krajina: "Slovensko", kraj: "Prešovský", location: "Stará Ľubovňa", name: "Apartmán Záhrada", hodnotenie: "4,80", cena: 75,
-fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"]
+fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"],bazen:"ano"
    },
   { id: "6PSL", krajina: "Slovensko", kraj: "Prešovský", location: "Stará Ľubovňa", name: "Apartmán Lesný", hodnotenie: "4,81", cena: 80,
 
@@ -1613,7 +1718,7 @@ fotky: ["/26.webp", "/26.webp","/26.webp","/26.webp"]
 //TRENCIN
       // Trenčín
       { id: "1TTN", krajina: "Slovensko", kraj: "Trenčiansky", location: "Trenčín", name: "Apartmán City View", hodnotenie: "4,85", cena: 95,
- fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"]
+ fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"],ideal:"predvoch",
        },
   { id: "2TTN", krajina: "Slovensko", kraj: "Trenčiansky", location: "Trenčín", name: "Apartmán Slnečný", hodnotenie: "4,82", cena: 90,
   fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
@@ -1790,11 +1895,77 @@ fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"]
    fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"]
    },
   { id: "5TBB", krajina: "Slovensko", kraj: "Trenčiansky", location: "Bánovce nad Bebravou", name: "Apartmán Záhrada", hodnotenie: "4,79", cena: 75,
-  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"]
+  fotky: ["/4.webp", "/4.webp","/4.webp","/4.webp"],bazen:"ano"
    },
   { id: "6TBB", krajina: "Slovensko", kraj: "Trenčiansky", location: "Bánovce nad Bebravou", name: "Apartmán Lesný", hodnotenie: "4,81", cena: 80,
-fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"]
+fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"],bazen:"ano"
    },
   //TRENCIN
+
+// vidiekt zapad
+{ id: "1zapad", krajina: "Slovensko", name: "Apartmán Háj", kraj: "BratislavskýVIDIEK", location: "Smolenice", hodnotenie: "4,88", cena: 82, fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"] },
+{ id: "2zapad", krajina: "Slovensko", name: "Vidiecka Perla", kraj: "BratislavskýVIDIEK", location: "Častá", hodnotenie: "4,91", cena: 79, fotky: ["/12.webp", "/12.webp","/12.webp","/12.webp"] },
+{ id: "3zapad", krajina: "Slovensko", name: "Lesný Záliv", kraj: "BratislavskýVIDIEK", location: "Dolná Krupá", hodnotenie: "4,84", cena: 76, fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"] },
+{ id: "4zapad", krajina: "Slovensko", name: "Horský Pokoj", kraj: "BratislavskýVIDIEK", location: "Budmerice", hodnotenie: "4,89", cena: 81, fotky: ["/6.webp", "/6.webp","/6.webp","/6.webp"] },
+{ id: "5zapad", krajina: "Slovensko", name: "Drevený Dvor", kraj: "BratislavskýVIDIEK", location: "Majcichov", hodnotenie: "4,80", cena: 75, fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"] },
+{ id: "6zapad", krajina: "Slovensko", name: "Lúčne Útočisko", kraj: "BratislavskýVIDIEK", location: "Boleráz", hodnotenie: "4,85", cena: 78, fotky: ["/5.webp", "/5.webp","/5.webp","/5.webp"] },
+
+{ id: "7zapad", krajina: "Slovensko", name: "Tiché Senohrady", kraj: "BratislavskýVIDIEK", location: "Marianka", hodnotenie: "4,92", cena: 88, fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"] },
+{ id: "8zapad", krajina: "Slovensko", name: "Borovicový Domček", kraj: "BratislavskýVIDIEK", location: "Vysoká pri Morave", hodnotenie: "4,87", cena: 77, fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"] },
+{ id: "9zapad", krajina: "Slovensko", name: "Riečny Kút", kraj: "BratislavskýVIDIEK", location: "Zálesie", hodnotenie: "4,93", cena: 85, fotky: ["/3.webp", "/3.webp","/3.webp","/3.webp"] },
+{ id: "10zapad", krajina: "Slovensko", name: "Vidiecka Chalúpka", kraj: "BratislavskýVIDIEK", location: "Ivanka pri Dunaji", hodnotenie: "4,86", cena: 84, fotky: ["/17.webp", "/17.webp","/17.webp","/17.webp"] },
+{ id: "11zapad", krajina: "Slovensko", name: "Zelený Mlyn", kraj: "BratislavskýVIDIEK", location: "Most pri Bratislave", hodnotenie: "4,89", cena: 82, fotky: ["/29.webp", "/19.webp","/19.webp","/19.webp"] },
+{ id: "12zapad", krajina: "Slovensko", name: "Krajinné Hniezdo", kraj: "BratislavskýVIDIEK", location: "Rovinka", hodnotenie: "4,88", cena: 83, fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"] },
+
+{ id: "13zapad", krajina: "Slovensko", name: "Podhorský Apartmán", kraj: "BratislavskýVIDIEK", location: "Topoľčianky", hodnotenie: "4,90", cena: 79, fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"] },
+{ id: "14zapad", krajina: "Slovensko", name: "Slnečná Samota", kraj: "BratislavskýVIDIEK", location: "Zlaté Moravce", hodnotenie: "4,91", cena: 85, fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"] },
+{ id: "15zapad", krajina: "Slovensko", name: "Javorový Priehon", kraj: "BratislavskýVIDIEK", location: "Bojná", hodnotenie: "4,87", cena: 74, fotky: ["/18.webp", "/18.webp","/18.webp","/18.webp"] },
+{ id: "16zapad", krajina: "Slovensko", name: "Laznický Domov", kraj: "BratislavskýVIDIEK", location: "Jacovce", hodnotenie: "4,83", cena: 73, fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"] },
+
+
+
+// vidiekt stred
+{ id: "1stred", kraj: "BanskobystrickýVIDIEK", location: "Hriňová", name: "Lesný Pokoj", hodnotenie:"4,90", cena:78, fotky: ["/2.webp", "/2.webp","/2.webp","/2.webp"] },
+{ id: "2stred", kraj: "BanskobystrickýVIDIEK", location: "Kokava nad Rimavicou", name: "Vidiecka Perla", hodnotenie:"4,88", cena:75,  fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"]},
+{ id: "3stred", kraj: "BanskobystrickýVIDIEK", location: "Cinobaňa", name: "Horský Dvor", hodnotenie:"4,83", cena:72, fotky: ["/12.webp", "/12.webp","/12.webp","/12.webp"] },
+{ id: "4stred", kraj: "BanskobystrickýVIDIEK", location: "Mýto pod Ďumbierom", name: "Lúčne Útočisko", hodnotenie:"4,93", cena:89,fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"] },
+{ id: "5stred", kraj: "BanskobystrickýVIDIEK", location: "Šumiac", name: "Podhorská Chalúpka", hodnotenie:"4,85", cena:77, fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"] },
+{ id: "6stred", kraj: "BanskobystrickýVIDIEK", location: "Brusno", name: "Tiché Senohrady", hodnotenie:"4,87", cena:80, fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"] },
+
+{ id: "7stred", kraj: "BanskobystrickýVIDIEK", location: "Terchová", name: "Borovicový Domček", hodnotenie:"4,95", cena:88, fotky: ["/22.webp", "/22.webp","/22.webp","/22.webp"] },
+{ id: "8stred", kraj: "BanskobystrickýVIDIEK", location: "Liptovská Osada", name: "Riečny Kút", hodnotenie:"4,86", cena:76, fotky: ["/9.webp", "/9.webp","/9.webp","/9.webp"] },
+{ id: "9stred", kraj: "BanskobystrickýVIDIEK", location: "Oravská Lesná", name: "Vidiecka Chalúpka", hodnotenie:"4,92", cena:85, fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"] },
+{ id: "10stred", kraj: "BanskobystrickýVIDIEK", location: "Zázrivá", name: "Zelený Mlyn", hodnotenie:"4,90", cena:82,fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"] },
+{ id: "11stred", kraj: "BanskobystrickýVIDIEK", location: "Liptovský Ján", name: "Krajinné Hniezdo", hodnotenie:"4,94", cena:91, fotky: ["/12.webp", "/12.webp","/12.webp","/12.webp"] },
+{ id: "12stred", kraj: "BanskobystrickýVIDIEK", location: "Kraľovany", name: "Podhorský Apartmán", hodnotenie:"4,83", cena:72,fotky: ["/14.webp", "/14.webp","/14.webp","/14.webp"] },
+
+{ id: "13stred", kraj: "BanskobystrickýVIDIEK", location: "Valaská Belá", name: "Slnečná Samota", hodnotenie:"4,82", cena:70, fotky: ["/12.webp", "/12.webp","/12.webp","/12.webp"]},
+{ id: "14stred", kraj: "BanskobystrickýVIDIEK", location: "Čičmany", name: "Javorový Priehon", hodnotenie:"4,97", cena:92, fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"] },
+{ id: "15stred", kraj: "BanskobystrickýVIDIEK", location: "Zliechov", name: "Laznický Domov", hodnotenie:"4,85", cena:80, fotky:["/11.webp", "/11.webp","/11.webp","/11.webp"] },
+{ id: "16stred", kraj: "BanskobystrickýVIDIEK", location: "Omšenie", name: "Lúčna Rezidencia", hodnotenie:"4,86", cena:79, fotky:["/8.webp", "/8.webp","/8.webp","/8.webp"]},
+
+
+// vidiekt vychod 
+{ id: "1vychod", kraj: "PrešovskýVIDIEKT", location: "Stará Ľubovňa", name: "Lesný Pokoj", hodnotenie:"4,90", cena:80, fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"] },
+{ id: "2vychod", kraj: "PrešovskýVIDIEKT", location: "Hniezdne", name: "Vidiecka Perla", hodnotenie:"4,87", cena:76, fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"]},
+{ id: "3vychod", kraj: "PrešovskýVIDIEKT", location: "Jakubany", name: "Horský Dvor", hodnotenie:"4,86", cena:78, fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"] },
+{ id: "4vychod", kraj: "PrešovskýVIDIEKT", location: "Plavnica", name: "Lúčne Útočisko", hodnotenie:"4,84", cena:74,  fotky: ["/10.webp", "/10.webp","/10.webp","/10.webp"] },
+{ id: "5vychod", kraj: "PrešovskýVIDIEKT", location: "Torysa", name: "Podhorská Chalúpka", hodnotenie:"4,88", cena:82, fotky: ["/13.webp", "/13.webp","/13.webp","/13.webp"]},
+{ id: "6vychod", kraj: "PrešovskýVIDIEKT", location: "Nižná Polianka", name: "Tiché Senohrady", hodnotenie:"4,82", cena:71, fotky: ["/8.webp", "/8.webp","/8.webp","/8.webp"] },
+
+{ id: "7vychod", kraj: "PrešovskýVIDIEKT", location: "Krásnohorské Podhradie", name: "Borovicový Domček", hodnotenie:"4,91", cena:81, fotky: ["/9.webp", "/9.webp","/9.webp","/9.webp"] },
+{ id: "8vychod", kraj: "PrešovskýVIDIEKT", location: "Betliar", name: "Riečny Kút", hodnotenie:"4,95", cena:88, fotky: ["/12.webp", "/12.webp","/12.webp","/12.webp"] },
+{ id: "9vychod", kraj: "PrešovskýVIDIEKT", location: "Jasov", name: "Vidiecka Chalúpka", hodnotenie:"4,90", cena:83, fotky: ["/16.webp", "/16.webp","/16.webp","/16.webp"] },
+{ id: "10vychod", kraj: "PrešovskýVIDIEKT", location: "Slavec", name: "Zelený Mlyn", hodnotenie:"4,83", cena:76, fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"] },
+{ id: "11vychod", kraj: "PrešovskýVIDIEKT", location: "Medzev", name: "Krajinné Hniezdo", hodnotenie:"4,86", cena:80, fotky: ["/23.webp", "/23.webp","/23.webp","/23.webp"] },
+{ id: "12vychod", kraj: "PrešovskýVIDIEKT", location: "Háj", name: "Podhorský Apartmán", hodnotenie:"4,88", cena:82, fotky: ["/19.webp", "/19.webp","/19.webp","/19.webp"] },
+
+{ id: "13vychod", kraj: "PrešovskýVIDIEKT", location: "Ždiar", name: "Slnečná Samota", hodnotenie:"4,96", cena:95, fotky: ["/15.webp", "/15.webp","/15.webp","/15.webp"] },
+{ id: "14vychod", kraj: "PrešovskýVIDIEKT", location: "Lendak", name: "Javorový Priehon", hodnotenie:"4,89", cena:79, fotky: ["/20.webp", "/20.webp","/20.webp","/20.webp"] },
+{ id: "15vychod", kraj: "PrešovskýVIDIEKT", location: "Vernár", name: "Laznický Domov", hodnotenie:"4,85", cena:77, fotky: ["/11.webp", "/11.webp","/11.webp","/11.webp"] },
+{ id: "16vychod", kraj: "PrešovskýVIDIEKT", location: "Reľov", name: "Lúčna Rezidencia", hodnotenie:"4,84", cena:73, fotky: ["/25.webp", "/25.webp","/25.webp","/25.webp"] },
+
+
+
 ];
 

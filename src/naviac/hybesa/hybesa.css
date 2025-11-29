@@ -9,6 +9,7 @@
     padding: 15px;
     border-radius: var( --border-radius-Vonku);
     width: fit-content;
+    box-shadow: var(--box-shadow);
     /* border: var(--border); */
     background-color:var(--farba-biela)
     /* background-color:var(--farba-biela) */

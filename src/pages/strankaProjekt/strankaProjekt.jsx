@@ -1,6 +1,6 @@
 import './strankaProjekt.css'
 // import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence, color } from "framer-motion";
 import Footer from '../footer/footer'
 
@@ -88,10 +88,12 @@ const inteligent = useRef(null)
   
 
   const location = useLocation()
+ const navigate = useNavigate();
+
   const apartman = location.state;
 
   const { pocetOblubene, setPocetOblubene, filter, setFilter,owerlap,seTeraz,teraz ,setInfo,scrollToRef,informacie,hodnotenie,majitel,otazky,
-     vidim,setVidim,text2,druha,tretia,akotofunugje,klikanec,objekt1,
+     vidim,setVidim,text2,druha,tretia,akotofunugje,klikanec,objekt1,random,setRandom
   } = useContext(GlobalContext);
   const[hover,setHover] = useState(null)
 
@@ -105,7 +107,7 @@ if (!apartman) {
 }
 
 const[pocitam,setPocitam] = useState(apartman?.cena)
-const[random,setRandom] = useState(null)
+
 const dalsieInfoRef = useRef(null);
 
 const triedy = ["lavahore", "lavadole", "pravahore", "pravadole"];
@@ -142,18 +144,7 @@ useEffect(() => {
 }, [vidim]);
 
   return (
-   <Templatepage>
-    <Card
-      nadpis="Pridané do rezervácie."
-      ikona ={ <i class='bx bx-cart' ></i>}
-      ></Card>
-      
-    <Owerlap
-    style={{backgroundColor:"var(--farba-bielaEfekty)"}}
-    >{random}</Owerlap>
-   
-    <div className='obalicek'>
-        <div className='horeobl'>
+   <Templatepage header = {<div className='horeobl'>
           <div>
           <span className='texticekohlavny'>{apartman.name}</span>
           <div style={{whiteSpace: 'nowrap', fontSize: "var(--font-size-base2)", color: "var(--farba-sivaText)"}}>
@@ -163,8 +154,8 @@ useEffect(() => {
             
             </div>
           
-        </div>
-        <div className='zazdielam'>
+          </div>
+          <div className='zazdielam'>
           <Ikonypage
             onMouseEnter={() => setHover(10)}
             onMouseLeave={() => setHover(null)}
@@ -182,8 +173,8 @@ useEffect(() => {
             ikonastyle = {{ color: hover === 10 ? "var(--farba-cierna)" : "var(--farba-sivaText)",}}
             text = "Zdieľať"
             textStyle={{
-    color: hover === 10 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
-  }}
+              color: hover === 10 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
+            }}
           ></Ikonypage>
 
 
@@ -208,8 +199,8 @@ useEffect(() => {
                    ikonastyle = {{ color: hover === 20 ? "var(--farba-cierna)" : "var(--farba-sivaText)",}}
      
             textStyle={{
-    color: hover === 20 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
-  }}
+        color: hover === 20 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
+      }}
           ></Ikonypage>
           
           <Ikonypage
@@ -245,7 +236,110 @@ useEffect(() => {
 
         </div>
 
+        </div>}>
+    <Card
+      nadpis="Pridané do rezervácie."
+      ikona ={ <i class='bx bx-cart' ></i>}
+      ></Card>
+      
+    <Owerlap
+    style={{backgroundColor:"var(--farba-bielaEfekty)"}}
+    >{random}</Owerlap>
+   
+    <div className='obalicek'>
+        {/* <div className='horeobl'>
+          <div>
+          <span className='texticekohlavny'>{apartman.name}</span>
+          <div style={{whiteSpace: 'nowrap', fontSize: "var(--font-size-base2)", color: "var(--farba-sivaText)"}}>
+            <span>{apartman.krajina} </span>
+            <span>{apartman.kraj} </span>
+            <span>{apartman.location}</span>
+            
+            </div>
+          
+          </div>
+          <div className='zazdielam'>
+          <Ikonypage
+            onMouseEnter={() => setHover(10)}
+            onMouseLeave={() => setHover(null)}
+            onClick={() => {seTeraz(true),
+
+              setRandom(<Form></Form>)
+            }}
+
+          style={{
+              cursor: "pointer",
+      
+          backgroundColor: hover === 10 ? "var(--farba-main2)" : "transparent"
+          }}
+            ikona = {<i class='bx bx-share' ></i>}
+            ikonastyle = {{ color: hover === 10 ? "var(--farba-cierna)" : "var(--farba-sivaText)",}}
+            text = "Zdieľať"
+            textStyle={{
+              color: hover === 10 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
+            }}
+          ></Ikonypage>
+
+
+          <Ikonypage
+          
+              onMouseEnter={() => setHover(20)}
+              onMouseLeave={() => setHover(null)}
+              
+            style={{
+              cursor: "pointer",
+            backgroundColor: hover === 20 ? "var(--farba-main2)" : "transparent"
+            }}
+              onClick= {() => 
+
+              
+                {setPocetOblubene(prev => prev+1)
+                  // setRandom(<div style={{width:"200px",height:"200px",backgroundColor:"red"}}></div>) ,      
+                  // seTeraz(true)
+                }}
+              ikona = {<i class='bx bx-heart' ></i>}
+              text = "Uložiť"
+                   ikonastyle = {{ color: hover === 20 ? "var(--farba-cierna)" : "var(--farba-sivaText)",}}
+     
+            textStyle={{
+        color: hover === 20 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
+      }}
+          ></Ikonypage>
+          
+          <Ikonypage
+          
+              onMouseEnter={() => setHover(15)}
+              onMouseLeave={() => setHover(null)}
+              
+            style={{
+              cursor: "pointer",
+            backgroundColor: hover === 15 ? "var(--farba-main2)" : "transparent"
+            }}
+              onClick= {() => {
+                seTeraz(true),
+                setRandom(<Kolazfotka
+                fotky = {fotky}
+                apartman = {apartman}
+                ></Kolazfotka>)}
+
+              
+                
+                } 
+              ikona = {<i class='bx bx-photo-album' ></i>}
+              text = "Prezrieť viac fotiek"
+                   ikonastyle = {{ color: hover === 15 ? "var(--farba-cierna)" : "var(--farba-sivaText)",}}
+            
+            textStyle={{
+    color: hover === 15 ? "var(--farba-cierna)" : "var(--farba-sivaText)",
+  }}
+          ></Ikonypage>
+
+           
+
+
         </div>
+
+        </div> */}
         <div className='obalciekk2'>
         <div className='foktaCastik'>
          
@@ -508,19 +602,19 @@ onClick={() => {setInfo(1),scrollToRef(informacie, 100)}}
                    nazov= "Dalšie Informácie"
                   >
          
-                  {apartman?.majitel?.map((key) => {
-                    const vyhoda = vyhody[key]; // z objektu vyhody
-                    const Ikona = vyhoda.ikona;
-                    // komponent ikony
-                    return (
-                      <Vyhodyzaklad
-                        key={key}
-                        ikona={<Ikona />}
-                        horetext={vyhoda.text}
-                        doletext={vyhoda.text2}
-                      />
-                    );
-                  })}
+                {apartman?.majitel?.slice(0, 4).map((key) => {
+                  const vyhoda = vyhody[key];
+                  const Ikona = vyhoda.ikona;
+
+                  return (
+                    <Vyhodyzaklad
+                      key={key}
+                      ikona={<Ikona />}
+                      horetext={vyhoda.text}
+                      doletext={vyhoda.text2}
+                    />
+                  );
+                })}
           
                     
                   
@@ -560,7 +654,7 @@ onClick={() => {setInfo(1),scrollToRef(informacie, 100)}}
                      unikat = {toggleRef1}
                
                    linktext = "Ako môžem začať prenajímať byt?"
-                   nazov= "Dalšie Informácie"
+                   nazov= "Dalšie informácie"
                    text = {apartman.popisek}
                  kliknutie={() => setVidim(prev => (prev === "kar" ? false : "kar"))}
                      textikona = "Zistiť viac"
@@ -859,8 +953,7 @@ onClick={() => {setInfo(1),scrollToRef(informacie, 100)}}
                           titul = {apartman.veduci.popisek}
                           >
                              <Ukazkahodnoteie
-                             onClick = {() => console.log("Kokot")
-                             }
+                       onClick={() => navigate(`/Clovekpage/${apartman.id}`)}
                              cislo={apartman.info.reference}
                              co = "Počet hodnotení"
 
@@ -914,7 +1007,7 @@ onClick={() => {setInfo(1),scrollToRef(informacie, 100)}}
                           nazov="Podrobnosti o hostiteľovi"
                         
 
-                          text = {apartman.veduci.podrobnost1}
+                          text1 = {apartman.veduci.podrobnost1}
                           text2 = {apartman.veduci.podrobnost2}
                           
                           ></Textvzorecek>
