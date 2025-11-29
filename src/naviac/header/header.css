@@ -321,15 +321,51 @@ align-items: center;
    
    background-color: var(--farba-main2);
 }
+
+/* iohvuiehviuehbvuirbvrubvhrbghbvhjdsbvjhbvhjsbvjhsbvhs */
 .hornyheader{
      display: none;
     width: 100%;
      z-index: 1000;
     height: 70px;
       padding:   10px 20px ;
-    background-color: var(--farba-biela);
+    background-color:red;
    box-shadow:var( --box-shadow)
 }
+.vnutorooo33{
+    height: 100%;
+    border-radius: var(--border-radius-maly);
+    overflow: hidden;
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+}
+.lenitambudeikona{
+    height: 100%;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: beige;
+}
+
+
+.inputetkkke {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--farba-biela);
+
+}
+
+.inputetkkke:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+
 @media (max-width: 750px) {
   /* sem daj štýly pre mobil/tablet */
   .Header{

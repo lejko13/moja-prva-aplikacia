@@ -102,13 +102,19 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
   return (
 <>
 <div className='hornyheader'>
+    <div className='vnutorooo33'>
+        <div className='lenitambudeikona'><i class='bx bx-search' ></i></div>
      <input type="text"
-         placeholder="Hľadaj..."
+         placeholder="Začni vyhľadávať"
          inputMode="text"
          autoComplete="off"
          aria-label="Vyhľadávanie"
+         className='inputetkkke'
          />
+        </div>
 </div>
+
+
   <motion.div
   className="Header"
   initial={{ y: -50, opacity: 0, width:60 }}
