@@ -8,7 +8,7 @@
   display: flex;
   gap: var( --padding);
   background-color: rgb(132, 255, 0);
-  /* background-color: var(--farba-main2); */
+  background-color: var(--farba-main2);
   /* background-color: red; */
   padding: var( --padding);
 }

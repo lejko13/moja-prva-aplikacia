@@ -30,8 +30,9 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
    
 
     
-     const { pocetOblubene, setPocetOblubene, filter, setFilter } = useContext(GlobalContext);
+     const { pocetOblubene, setPocetOblubene, filter, setFilter,teraz, seTeraz } = useContext(GlobalContext);
 
+       
     const [darkMode, setDarkMode] = useState(false);
     const[hover,setHover] = useState(false)
 
@@ -47,7 +48,9 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
 
        const navigate = useNavigate();
 
-        const fuse = useMemo(() => new Fuse(apartmany, { keys: ['krajina', 'kraj','location'], threshold: 0.3 }), []);
+        // const fuse = useMemo(() => new Fuse(apartmany, { keys: ['krajina', 'kraj','location'], threshold: 0.3 }), []);
+
+
        const results = useMemo(() => {
     if (!query || query.trim() === "") return [];
     
@@ -102,16 +105,33 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
   return (
 <>
 <div className='hornyheader'>
-    <div className='vnutorooo33'>
+    <div className='vnutorooo33'
+    onClick={() => seTeraz(true)}
+    >
         <div className='lenitambudeikona'><i class='bx bx-search' ></i></div>
-     <input type="text"
-         placeholder="Začni vyhľadávať"
-         inputMode="text"
-         autoComplete="off"
-         aria-label="Vyhľadávanie"
-         className='inputetkkke'
-         />
+     <input
+  type="text"
+  placeholder="Začni vyhľadávať"
+  inputMode="text"
+  autoComplete="off"
+  aria-label="Vyhľadávanie"
+  className='inputetkkke'
+
+  value={query}                    // 🔌 prepojenie so stavom
+  onChange={(e) => setQuery(e.target.value)}   // 🔥 fuzzy search pri písaní
+/>
+
+
         </div>
+        {results.length > 0 && (
+  <div className='zobrazeneeinputu'>
+    {results.map(item => (
+      <div key={item.id} onClick={() => klik(item)}>
+        {item.name} - {item.location}
+      </div>
+    ))}
+  </div>
+)}
 </div>
 
 

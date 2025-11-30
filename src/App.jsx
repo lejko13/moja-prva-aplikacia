@@ -23,6 +23,8 @@ import Clovekpage from './pages/clovekpage/clovekpage'
 import Navigaciamobil from './naviac/navigaciamobil/navigaciamobil'
 import Castcosahyba from './naviac/castcosahybe/castcosahyba'
 
+import Owerlap from './pages/owerlap/owerlap';
+
 
 import StrankaProjekt from './pages/strankaProjekt/strankaProjekt'
 
@@ -77,7 +79,10 @@ const pravasipka = useRef([])
     
  
     
-
+ <Owerlap
+    style={{backgroundColor:"var(--farba-bielaEfekty)"}}
+    ></Owerlap>
+   
 
  
     <AnimatePresence>

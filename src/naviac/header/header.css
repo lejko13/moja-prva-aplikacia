@@ -326,32 +326,37 @@ align-items: center;
 .hornyheader{
      display: none;
     width: 100%;
-     z-index: 1000;
+  
     height: 70px;
       padding:   10px 20px ;
-    background-color:red;
-   box-shadow:var( --box-shadow)
+    background-color:var(--farba-biela);
+    /* background-color:rgb(0, 0, 0); */
+  
 }
 .vnutorooo33{
     height: 100%;
     border-radius: var(--border-radius-maly);
     overflow: hidden;
-    background-color: aqua;
+     
+     box-shadow:var( --box-shadow);
+   background-color:var(--farba-biela);
     width: 100%;
     display: flex;
 }
 .lenitambudeikona{
     height: 100%;
     width: 40px;
+        z-index: 1200;
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: beige;
+   background-color:var(--farba-biela);
 }
 
 
 .inputetkkke {
   width: 100%;
+    z-index: 1200;
   height: 100%;
   outline: none;
     font-size: 16px !important;
