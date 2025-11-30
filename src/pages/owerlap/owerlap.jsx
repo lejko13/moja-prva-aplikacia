@@ -5,7 +5,7 @@ import { GlobalContext } from '../../naviac/reactcontext/reactcontext';
 import './owelap.css';
 import Ukazovatelko from '../../naviac/ukazovatelko/ukazovatelko';
 
-const Owerlap = ({ children,style }) => {
+const Owerlap = ({ children,style,dizajnicek }) => {
   const [hoverecek, setHoverecek] = useState(null);
   const { teraz, seTeraz } = useContext(GlobalContext);
 
@@ -22,7 +22,7 @@ const Owerlap = ({ children,style }) => {
           exit={{ opacity: 0 }}
          
         >
-          <div className='obsahtOwerlap' onClick={e => e.stopPropagation()}>
+          <div  style = {dizajnicek}className='obsahtOwerlap' onClick={e => e.stopPropagation()}>
          <Ukazovatelko
             onClick={() =>seTeraz(false)}
               onMouseEnter={() => setHoverecek(1)}

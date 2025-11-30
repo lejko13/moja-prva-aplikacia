@@ -28,7 +28,7 @@ import { use } from 'react';
 const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farba,setFarba,setQuery,query,setDomov,pojdeme,poslednyref
 }) => {
    
-
+const referencia = useRef(null)
     
      const { pocetOblubene, setPocetOblubene, filter, setFilter,teraz, seTeraz } = useContext(GlobalContext);
 
@@ -101,40 +101,68 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
 
 
   };
+  useEffect(() => {
+  function handleClickOutside(e) {
+    // ak klik nebol v INPUTE → vymaž input
+    if (referencia.current && !referencia.current.contains(e.target)) {
+      setQuery("");
+    }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
  
   return (
 <>
-<div className='hornyheader' style={{"--deninujem": teraz ? "red" : "blue"}}>
-    <div className='vnutorooo33'
-    onClick={() => seTeraz(true)}
-    >
-        <div className='lenitambudeikona'><i class='ikonografia bx bx-search'
-          ></i></div>
-     <input
-  type="text"
-  placeholder="Začni vyhľadávať"
-  inputMode="text"
-  autoComplete="off"
-  aria-label="Vyhľadávanie"
-  className='inputetkkke'
-    
+<div className='hornyheader' style={{"--deninujem": teraz ? "var(--farba-cierna)" : "var(--farba-sivaText)"}}>
+  <div style={{display:"flex",width:"100%",height:"100%"}}  >
+    <div className='vnutorooo33' onClick={() => seTeraz(true)}>
+      <div className='ikonaikona'><i class='osobna bx bx-search'></i></div>
+        
+          
+            <input
+                type="text"
+                placeholder="Začni vyhľadávať"
+                inputMode="text"
+                autoComplete="off"
+                aria-label="Vyhľadávanie"
+                 ref={referencia}  
+                className='inputetkkke'
+               
+                  
 
 
-  value={query}                    // 🔌 prepojenie so stavom
-  onChange={(e) => setQuery(e.target.value)}   // 🔥 fuzzy search pri písaní
-/>
+                value={query}                    // 🔌 prepojenie so stavom
+                onChange={(e) => setQuery(e.target.value)}   // 🔥 fuzzy search pri písaní
+                />
+            
 
 
         </div>
-        {results.length > 0 && (
-  <div className='zobrazeneeinputu'>
-    {results.map(item => (
-      <div key={item.id} onClick={() => klik(item)}>
-        {item.name} - {item.location}
-      </div>
-    ))}
+        
   </div>
-)}
+ <AnimatePresence>
+  {results.length > 0 && (
+    <motion.div
+      className='inkognito'
+       initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+    >
+      <div>
+        {results.map(item => (
+          <div key={item.id} onClick={() => klik(item)}>
+            {item.name} - {item.location}
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
 </div>
 
 

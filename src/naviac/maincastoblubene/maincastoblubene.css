@@ -12,8 +12,9 @@
     height:fit-content;
     /* border: 1px solid black; */
     /* gap: var( --gap-little); */
-    padding: 20px 0px 0px 20px;
-    background-color: var(--farba-biela);
+    padding: 0px 0px 0px 20px;
+    background-color:var(--farba-biela);
+    /* background-color: red; */
 }
 @media (max-width: 750px) {
 .Maincastoblubene{

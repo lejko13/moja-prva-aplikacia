@@ -80,6 +80,7 @@ const pravasipka = useRef([])
  
     
  <Owerlap
+ dizajnicek = {{display:"none"}}
     style={{backgroundColor:"var(--farba-bielaEfekty)"}}
     ></Owerlap>
    
