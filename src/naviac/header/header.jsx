@@ -104,11 +104,12 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
  
   return (
 <>
-<div className='hornyheader'>
+<div className='hornyheader' style={{"--deninujem": teraz ? "red" : "blue"}}>
     <div className='vnutorooo33'
     onClick={() => seTeraz(true)}
     >
-        <div className='lenitambudeikona'><i class='bx bx-search' ></i></div>
+        <div className='lenitambudeikona'><i class='ikonografia bx bx-search'
+          ></i></div>
      <input
   type="text"
   placeholder="Začni vyhľadávať"
@@ -116,6 +117,8 @@ const Header = ({otvorenie,setOtvorenie,hoverheader,sethoverheader,inputRef,farb
   autoComplete="off"
   aria-label="Vyhľadávanie"
   className='inputetkkke'
+    
+
 
   value={query}                    // 🔌 prepojenie so stavom
   onChange={(e) => setQuery(e.target.value)}   // 🔥 fuzzy search pri písaní

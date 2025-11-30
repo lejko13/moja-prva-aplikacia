@@ -326,8 +326,9 @@ align-items: center;
 .hornyheader{
      display: none;
     width: 100%;
-  
-    height: 70px;
+  position: relative;
+    height: 75px;
+    overflow: visible;
       padding:   10px 20px ;
     background-color:var(--farba-biela);
     /* background-color:rgb(0, 0, 0); */
@@ -335,32 +336,45 @@ align-items: center;
 }
 .vnutorooo33{
     height: 100%;
-    border-radius: var(--border-radius-maly);
-    overflow: hidden;
-     
-     box-shadow:var( --box-shadow);
-   background-color:var(--farba-biela);
+    /* border-radius: var(--border-radius-maly); */
+    /* overflow: hidden; */
+    border-radius: 12px;
+     z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16); 
+   /* background-color:blue; */
     width: 100%;
     display: flex;
 }
+.inputetkkke::placeholder {
+    color: var(--deninujem);
+    opacity: 1;
+}
 .lenitambudeikona{
     height: 100%;
-    width: 40px;
+    width: 60px;
         z-index: 1200;
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: 20px;
+    border-radius: 12px 0px 0px 12px;
    background-color:var(--farba-biela);
+   /* background-color:red; */
 }
-
+.ikonografia{
+      color: var(--deninujem);
+}
 
 .inputetkkke {
   width: 100%;
     z-index: 1200;
   height: 100%;
   outline: none;
+     border-radius:  0px 18px 18px 0px;
     font-size: 16px !important;
-  border: none;
+    transform: scale(0.8);
+      border: none;
+  color: var(--placeholder-color);
   background-color: var(--farba-biela);
 
 }
